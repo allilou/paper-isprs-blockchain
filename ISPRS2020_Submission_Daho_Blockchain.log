@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  5 JAN 2020 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  5 JAN 2020 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,47 +312,47 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 58.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 56.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 58.
+(Font)              size <6> substituted on input line 56.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.47496> not available
-(Font)              size <6> substituted on input line 58.
+(Font)              size <6> substituted on input line 56.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 58.
+(Font)              size <6> substituted on input line 56.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.25> on input line 58.
+(Font)              <9.25> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.47496> on input line 58.
+(Font)              <6.47496> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.625> on input line 58.
+(Font)              <4.625> on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.25> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 58.
+(Font)              <8> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 58.
+(Font)              <6> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 58.
+(Font)              <5> on input line 56.
 
-Underfull \hbox (badness 3449) in paragraph at lines 104--106
+Underfull \hbox (badness 3449) in paragraph at lines 95--97
 \OT1/ptm/m/n/9.25 To as-sist au-thors in pre-par-ing their pa-pers, styleguides
 
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 104--106
+Underfull \hbox (badness 7326) in paragraph at lines 95--97
 \OT1/ptm/m/n/9.25 for pre-par-ing di-gital ver-sions of pa-pers are provided
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 104--106
+Underfull \hbox (badness 3168) in paragraph at lines 95--97
 \OT1/ptm/m/n/9.25 in Word and/or LaTeX on the IS-PRS web Page, see:
  []
 
@@ -369,69 +369,69 @@ df>
 (epstopdf)                    size: 17999 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/test_sites/fig1-ep
 s-converted-to.pdf figures/test_sites/fig1.eps>
-(epstopdf)             \includegraphics on input line 224.
+(epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
-<figures/test_sites/fig1-eps-converted-to.pdf, id=10, 8482.69125pt x 4552.00626
-pt>
+<figures/test_sites/fig1-eps-converted-to.pdf, id=9, 8482.69125pt x 4552.00626p
+t>
 File: figures/test_sites/fig1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/test_sites/fig1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/test_sites/fig1-eps-converted-to.pdf  used on 
-input line 224.
+input line 215.
 (pdftex.def)             Requested size: 233.31252pt x 125.1632pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 235.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 226.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9.25> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
 
 
-LaTeX Warning: Citation `smith1987rep' on page 2 undefined on input line 267.
+LaTeX Warning: Citation `smith1987rep' on page 2 undefined on input line 258.
 
 
-LaTeX Warning: Citation `smith1987' on page 2 undefined on input line 271.
+LaTeX Warning: Citation `smith1987' on page 2 undefined on input line 262.
 
 
-LaTeX Warning: Citation `michalis2008' on page 2 undefined on input line 271.
+LaTeX Warning: Citation `michalis2008' on page 2 undefined on input line 262.
 
 
-LaTeX Warning: Citation `foerstner2016' on page 2 undefined on input line 274.
+LaTeX Warning: Citation `foerstner2016' on page 2 undefined on input line 265.
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 274--275
+Underfull \hbox (badness 2443) in paragraph at lines 265--266
 [] |\OT1/ptm/b/n/9.25 3.5.2 Ref-er-ences from Books: \OT1/ptm/m/n/9.25 Books sh
 ould be cited
  []
 
 
-LaTeX Warning: Citation `smith1987rep' on page 2 undefined on input line 277.
+LaTeX Warning: Citation `smith1987rep' on page 2 undefined on input line 268.
 
 
-LaTeX Warning: Citation `smith2000' on page 2 undefined on input line 277.
+LaTeX Warning: Citation `smith2000' on page 2 undefined on input line 268.
 
 
-LaTeX Warning: Citation `chan2017' on page 2 undefined on input line 280.
+LaTeX Warning: Citation `chan2017' on page 2 undefined on input line 271.
 
 
-LaTeX Warning: Citation `maas2017' on page 2 undefined on input line 280.
+LaTeX Warning: Citation `maas2017' on page 2 undefined on input line 271.
 
 [2 <./figures/test_sites/fig1-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `dubayah2013' on page 3 undefined on input line 283.
+LaTeX Warning: Citation `dubayah2013' on page 3 undefined on input line 274.
 
 
-LaTeX Warning: Citation `grass2017' on page 3 undefined on input line 286.
+LaTeX Warning: Citation `grass2017' on page 3 undefined on input line 277.
 
 
-LaTeX Warning: Citation `grass2015' on page 3 undefined on input line 289.
+LaTeX Warning: Citation `grass2015' on page 3 undefined on input line 280.
 
 
-LaTeX Warning: Citation `lennert2017' on page 3 undefined on input line 292.
+LaTeX Warning: Citation `lennert2017' on page 3 undefined on input line 283.
 
 
-LaTeX Warning: Citation `gago2016' on page 3 undefined on input line 295.
+LaTeX Warning: Citation `gago2016' on page 3 undefined on input line 286.
 
 No file ISPRS2020_Submission_Daho_Blockchain.bbl.
 [3
@@ -441,12 +441,15 @@ No file ISPRS2020_Submission_Daho_Blockchain.bbl.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47496pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4205 strings out of 494518
- 64426 string characters out of 6176312
+ 4206 strings out of 494518
+ 64456 string characters out of 6176312
  147275 words of memory out of 5000000
- 7805 multiletter control sequences out of 15000+600000
+ 7806 multiletter control sequences out of 15000+600000
  18665 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  42i,11n,39p,439b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -458,7 +461,7 @@ nts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (3 pages, 108818 byt
+Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (3 pages, 108085 byt
 es).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
