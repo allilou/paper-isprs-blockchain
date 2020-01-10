@@ -1,10 +1,17 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{The Ethereum blockchain paradigm}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Ethereum smart contracts security issues}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{IPFS and OrbitDB}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Blockchain business models}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{Blockchain developer tools}{section.1}% 6
-\BOOKMARK [1][-]{section.2}{THE CRYPTO-SPATIAL FRAMEWORK}{}% 7
-\BOOKMARK [2][-]{subsection.2.1}{Title}{section.2}% 8
-\BOOKMARK [1][-]{section.3}{DECENTRALIZED LAND ADMINISTRATION}{}% 9
-\BOOKMARK [2][-]{subsection.3.1}{The workflow}{section.3}% 10
+\BOOKMARK [1][-]{section.2}{DECENTRALIZED APPLICATIONS}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Ethereum blockchain}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{IPFS and OrbitDB}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Decentralized applications developpement}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{THE CRYPTO-SPATIAL FRAMEWORK}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Framework Design}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.1.1}{CSFeature}{subsection.3.1}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.2}{CSFeatureRegistry}{subsection.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Solidity Implementation}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Security and design patterns}{section.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Security issues mitigation}{subsection.3.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Design patterns}{subsection.3.3}% 13
+\BOOKMARK [1][-]{section.4}{DECENTRALIZED LAND ADMINISTRATION}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{The workflow}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{BLOCKCHAIN BUSINESS MODELS}{}% 16
+\BOOKMARK [1][-]{section.6}{CONCLUSION}{}% 17

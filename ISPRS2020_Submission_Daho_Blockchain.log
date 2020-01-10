@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  9 JAN 2020 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  11 JAN 2020 00:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,19 +248,44 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count107
+\lst@gtempboxa=\box30
+\lst@token=\toks22
+\lst@length=\count108
+\lst@currlwidth=\dimen131
+\lst@column=\count109
+\lst@pos=\count110
+\lst@lostspace=\dimen132
+\lst@width=\dimen133
+\lst@newlines=\count111
+\lst@lineno=\count112
+\lst@maxwidth=\dimen134
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count113
+\lst@skipnumbers=\count114
+\lst@framebox=\box31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen131
-\captionmargin@=\dimen132
-\captionwidth=\dimen133
-\caption@tempdima=\dimen134
-\caption@indent=\dimen135
-\caption@parindent=\dimen136
-\caption@hangindent=\dimen137
+\captionmargin=\dimen135
+\captionmargin@=\dimen136
+\captionwidth=\dimen137
+\caption@tempdima=\dimen138
+\caption@indent=\dimen139
+\caption@parindent=\dimen140
+\caption@hangindent=\dimen141
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -272,8 +297,9 @@ See the caption package documentation for explanation.
 Package caption Info: \@makecaption = \long macro:#1#2->\vskip 4\p@ \setbox \@t
 empboxa \hbox {#1: #2}\ifdim \wd \@tempboxa >\hsize #1: #2\par \else \hbox to\h
 size {\hfil \box \@tempboxa \hfil }\fi .
-\c@caption@flags=\count107
-\c@ContinuedFloat=\count108
+\c@caption@flags=\count115
+\c@ContinuedFloat=\count116
+Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/11/13 3.27 The Babel package
@@ -289,11 +315,11 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/11/13 3.27 Babel common definitions
-\babel@savecnt=\count109
-\U@D=\dimen138
+\babel@savecnt=\count117
+\U@D=\dimen142
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count110
+\bbl@dirlevel=\count118
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -338,16 +364,16 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen139
-\Hy@linkcounter=\count111
-\Hy@pagecounter=\count112
+\@linkdim=\dimen143
+\Hy@linkcounter=\count119
+\Hy@pagecounter=\count120
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count113
+\Hy@SavedSpaceFactor=\count121
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -359,17 +385,17 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count114
+\c@Hy@tempcnt=\count122
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen140
-\Fld@menulength=\count115
-\Field@Width=\dimen141
-\Fld@charsize=\dimen142
+\XeTeXLinkMargin=\dimen144
+\Fld@menulength=\count123
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -379,16 +405,16 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count116
-\c@Item=\count117
-\c@Hfootnote=\count118
+\Hy@abspage=\count124
+\c@Item=\count125
+\c@Hfootnote=\count126
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count119
-\c@bookmark@seq@number=\count120
+\Fld@listcount=\count127
+\c@bookmark@seq@number=\count128
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -400,38 +426,38 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./ISPRS2020_Submission_Daho_Blockchain.aux)
 \openout1 = `ISPRS2020_Submission_Daho_Blockchain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen143
-\scratchbox=\box30
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen144
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count129
+\scratchdimen=\dimen147
+\scratchbox=\box32
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen148
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks24
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -467,22 +493,23 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\c@lstlisting=\count135
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 27.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count136
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./ISPRS2020_Submission_Daho_Blockchain.out)
 (./ISPRS2020_Submission_Daho_Blockchain.out)
@@ -490,37 +517,59 @@ LaTeX Info: Redefining \nameref on input line 27.
 \openout3 = `ISPRS2020_Submission_Daho_Blockchain.out'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
-LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 60.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 59.
+(Font)              size <6> substituted on input line 60.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.47496> not available
-(Font)              size <6> substituted on input line 59.
+(Font)              size <6> substituted on input line 60.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 59.
+(Font)              size <6> substituted on input line 60.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.25> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+
+Underfull \hbox (badness 1635) in paragraph at lines 68--70
+\OT1/ptm/m/n/9.25 Geo-spa-tial Consortium](http://docs.opengeospatial.org/dp/18
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+\OT1/ptm/m/n/9.25 041r1/18-041r1.html) where a [Block-chain and Dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+\OT1/ptm/m/n/9.25 trib-uted Ledger Tech-no-lo-gies Do-main Work-ing
+ []
+
+
+Overfull \hbox (9.47899pt too wide) in paragraph at lines 68--70
+\OT1/ptm/m/n/9.25 Group](https://www.opengeospatial.org/projects/groups/bdltdwg
+)
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 71.
+(Font)              size <6> substituted on input line 88.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <6.47496> not available
-(Font)              size <6> substituted on input line 71.
+(Font)              size <6> substituted on input line 88.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <6.47496> not available
-(Font)              size <6> substituted on input line 71.
+(Font)              size <6> substituted on input line 88.
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 82--83
+Underfull \hbox (badness 1635) in paragraph at lines 99--100
 \OT1/ptm/m/n/9.25 some other com-pon-ents; and $[]\OT1/cmr/m/n/9 ^^E[]$ \OT1/pt
 m/m/n/9.25 is the block-level state-
  []
@@ -529,49 +578,277 @@ m/m/n/9.25 is the block-level state-
 
 
 ]
+Underfull \hbox (badness 1264) in paragraph at lines 128--129
+\OT1/ptm/m/n/9.25 ordin-ate (CSC) was used. Nev-er-the-less, some modi-fic-a-
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 128--129
+\OT1/ptm/m/n/9.25 the use of the H3 javas-cript lib-rary [uber.github.io/h3/],
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 128--129
+\OT1/ptm/m/n/9.25 with the res-ol-u-tion 15 (Av-er-age Hexagon Edge Length
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 128--129
+\OT1/ptm/m/n/9.25 of 0.5 km), which it is a par-tially con-form-ing im-ple-
+ []
+
+<figures/class-crypto-spatial-lib.png, id=99, 570.13pt x 498.86375pt>
+File: figures/class-crypto-spatial-lib.png Graphic file (type png)
+<use figures/class-crypto-spatial-lib.png>
+Package pdftex.def Info: figures/class-crypto-spatial-lib.png  used on input li
+ne 137.
+(pdftex.def)             Requested size: 233.31252pt x 204.14725pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]\OT1/ptm/m/n/9.25 1. The de-velop-per should be able to in-teg-rate/-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+\OT1/ptm/m/n/9.25 don-w-load the solid-ity re-usable com-pon-ents (con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+\OT1/ptm/m/n/9.25 tacts) from [npm](https://www.npmjs.com/) an-d/or
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 149--150
+\OT1/ptm/m/n/9.25 [ethPM](https://www.ethpm.com/) as stan-dalone pack-ages
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 149--150
+\OT1/ptm/m/n/9.25 or in-cluded in a widely ac-cep-ted lib-rary, like [open-Zep-
+
+ []
+
+[2 <./figures/class-crypto-spatial-lib.png (PNG copy)>]
+Underfull \hbox (badness 5260) in paragraph at lines 155--156
+[]\OT1/ptm/m/n/9.25 1. The de-velop-per should be able to in-ter-act with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\OT1/ptm/m/n/9.25 the fea-tures in-dex with the [OGC OpenAPI REST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\OT1/ptm/m/n/9.25 API](http://docs.opengeospatial.org/wp/16-019r4/16-
+ []
+
+
+Overfull \hbox (12.38463pt too wide) in paragraph at lines 245--245
+[]  \OT1/cmtt/m/n/9 require(dggsIndex.length != 0, "Empty dggsIndex");[] 
+ []
+
+
+Overfull \hbox (21.83452pt too wide) in paragraph at lines 245--245
+[]  \OT1/cmtt/m/n/9 bytes32 csc = CSGeometryLib.computeCSCIndex(_sender,[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
+[]\OT1/ptm/m/n/9.25 The com-plete im-ple-ment-a-tion of the Crypto-Spatial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
+\OT1/ptm/m/n/9.25 frame-work can be found on the fol-low-ing git-hub
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
+\OT1/ptm/m/n/9.25 re-pos-it-ory. https://github.com/allilou/onchain-land-
+ []
+
+[3]
+Underfull \hbox (badness 1270) in paragraph at lines 262--263
+\OT1/ptm/m/n/9.25 im-mut-able code taht ex-ecute in de-cent-ral-ized paradigm a
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+[]\OT1/ptm/m/n/9.25 rithmetic Over-/Un-der Flows To guard against un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+\OT1/ptm/m/n/9.25 der-/over-flow vul-ner-ab-il-it-ies we use the open-Zep-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+\OT1/ptm/m/n/9.25 pelin ```SafeMath``` math-em-at-ical lib-rary for the state
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+\OT1/ptm/m/n/9.25 vari-able ```fea-turesCount (uint256)``` in the [CSFea-
+ []
+
+
+Overfull \hbox (32.6768pt too wide) in paragraph at lines 264--266
+\OT1/ptm/m/n/9.25 tureRegistry.sol](../solidity/contracts/geospatial/CSFeatureR
+egistry.sol). 
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 277--281
+\OT1/ptm/m/n/9.25 Float-ing Pragma |CSFea-tureRegistry.sol |L: 9 C: 0
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 277--281
+\OT1/ptm/m/n/9.25 | |SWC-108 |Low|State Vari-able De-fault Vis-ib-il-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
+[]\OT1/ptm/m/n/9.25 ``` INFO:Slither:./contracts/LAParcelRegistry.sol ana-
+ []
+
+
+Overfull \hbox (1.73578pt too wide) in paragraph at lines 312--313
+[]\OT1/ptm/m/n/9.25 - [CSFea-ture.sol](../solidity/contracts/geospatial/CSFeatu
+re.sol)
+ []
+
+
+Overfull \hbox (72.41446pt too wide) in paragraph at lines 314--315
+[]\OT1/ptm/m/n/9.25 - In [CSFea-tureRegistry.sol](../solidity/contracts/geospat
+ial/CSFeatureRegistry.sol)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+\OT1/ptm/m/n/9.25 ture.sol](../solidity/contracts/geospatial/CSFeature.sol) sma
+rt
+ []
+
+
+Overfull \hbox (39.97488pt too wide) in paragraph at lines 318--320
+[]\OT1/ptm/m/n/9.25 Mortal The [CSFea-ture.sol](../solidity/contracts/geospatia
+l/CSFeature.sol)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
+[]\OT1/ptm/m/n/9.25 Circuit Breaker The [CSFea-
+ []
+
+
+Overfull \hbox (30.3643pt too wide) in paragraph at lines 325--327
+\OT1/ptm/m/n/9.25 tureRegistry.sol](../solidity/contracts/geospatial/CSFeatureR
+egistry.sol)
+ []
+
+[4]
+Underfull \hbox (badness 1087) in paragraph at lines 354--355
+\OT1/ptm/m/n/9.25 where se-cur-ity and trans-par-ency are im-port-ant and where
+
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 354--355
+\OT1/ptm/m/n/9.25 there is a high level of value, but where the re-quired
+ []
+
+
+Overfull \hbox (9.65428pt too wide) in paragraph at lines 354--355
+\OT1/ptm/m/n/9.25 [Economist](https://www.economist.com/leaders/2015/10/31/the-
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+[]\OT1/ptm/m/n/9.25 The aim of this pro-ject is to im-ple-ment the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+\OT1/ptm/m/n/9.25 [ISO 19152:2012 stand-ard (Geo-graphic in-form-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+\OT1/ptm/m/n/9.25 a-tion | Land Ad-min-is-tra-tion Do-main Model
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+\OT1/ptm/m/n/9.25 (LADM))](https://www.iso.org/standard/51206.html) on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+[]\OT1/ptm/m/n/9.25 One of the ma-jor goals for port-ing this land re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+\OT1/ptm/m/n/9.25 gistry solu-tion to the eth-erum block-chain is the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+\OT1/ptm/m/n/9.25 abil-ity to use it as a [crowd sourcing land re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+\OT1/ptm/m/n/9.25 gistry plateform](http://www.fao.org/tenure/voluntary-
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 360--361
+\OT1/ptm/m/n/9.25 guidelines/en/) to col-lect ten-ure re-la-tion-ships and as a
+
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 360--361
+\OT1/ptm/m/n/9.25 so to pro-tect the in-di-vidual and col-lect-ive rights of th
+eir
+ []
+
 No file ISPRS2020_Submission_Daho_Blockchain.bbl.
 
-Package caption Warning: Unused \captionsetup[figure] on input line 24.
+Package caption Warning: Unused \captionsetup[table] on input line 26.
 See the caption package documentation for explanation.
 
-
-Package caption Warning: Unused \captionsetup[table] on input line 25.
-See the caption package documentation for explanation.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./ISPRS2020_Submission_Daho_Blockchain.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package rerunfilecheck Info: File `ISPRS2020_Submission_Daho_Blockchain.out' ha
+s not changed.
+(rerunfilecheck)             Checksum: BC331D9C341C910A86B8AB4154C90ACE;1153.
 
-
-Package rerunfilecheck Warning: File `ISPRS2020_Submission_Daho_Blockchain.out'
- has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ISPRS2020_Submission_Daho_Blockchai
-n.out':
-(rerunfilecheck)             Before: 5E2A9A0A8FCEF62696BFCCEF1E721270;667
-(rerunfilecheck)             After:  4AAA40EE6E161724493FC2E0B4D2F408;679.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47496pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 8275 strings out of 494518
- 124310 string characters out of 6176312
- 235393 words of memory out of 5000000
- 11797 multiletter control sequences out of 15000+600000
- 21198 words of font info for 52 fonts, out of 8000000 for 9000
+ 9642 strings out of 494518
+ 143901 string characters out of 6176312
+ 255897 words of memory out of 5000000
+ 13133 multiletter control sequences out of 15000+600000
+ 22950 words of font info for 55 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 42i,11n,38p,809b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,39p,809b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{block} has been referenced but does not exist, re
 placed by a fixed one
 
@@ -591,14 +868,15 @@ ts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (2 pages, 102694 byt
+/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (5 pages, 163521 byt
 es).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,6 +9,7 @@
 \usepackage{geometry} % added 27-02-2014 Markus Englich
 \usepackage{epstopdf}
 \usepackage{amsmath}
+\usepackage{listings}
 \usepackage[labelsep=period]{caption}  % added 14-04-2016 Markus Englich - Recommendation by Sebastian Brocks
 \usepackage[british]{babel} 
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
@@ -35,7 +36,7 @@
 
 % KAO: Remove extra newline
 \address{
-	\textsuperscript{1 }Geodetic Sciences and Topographic Works Engineer, Ain Temouchent, Algeria- bidandou@yahoo.fr\\
+	\textsuperscript{1 }Geodetic Sciences and Topographic Works Engineer, Ain Temouchent, Algeria - bidandou@yahoo.fr\\
 }
 
 % If the corresponding author is NOT the final author, always add a % space before the subsequent comma, i.e.
@@ -64,7 +65,23 @@ Blockchain is an emerging immature technology that disrupt many well established
 % KAO: Sloppy spacing ensures non-overfull lines. Can be removed if this is not an issue.
 \sloppy
 
-\subsection{The Ethereum blockchain paradigm}\label{sec:The Ethereum blockchain paradigm}
+Situation : Geospatial tech and data layers
+This project is challenging because it implements geospatial data management features, needed to handle land parcels, on the Blockchain technology, which is an open research subject at the [Open Geospatial Consortium](http://docs.opengeospatial.org/dp/18-041r1/18-041r1.html) where a [Blockchain and Distributed Ledger Technologies Domain Working Group](https://www.opengeospatial.org/projects/groups/bdltdwg) has been created especially for that.
+
+
+Complications : Decentralization / Blockchain / market growth
+
+Question : Blockchain for geospatial 
+
+
+\newpage
+
+\section{DECENTRALIZED APPLICATIONS}\label{sec:DECENTRALIZED APPLICATIONS}
+ 
+% KAO: Sloppy spacing ensures non-overfull lines. Can be removed if this is not an issue.
+\sloppy
+
+\subsection{Ethereum blockchain}\label{sec:Ethereum blockchain}
 
 Ethereum blockchain can be viewed as a transaction-based state machine: we begin with a genesis state and incrementally execute transactions to morph it into some final state. It is this final state which we accept as the canonical “version” of the world of Ethereum. The state can include such information as account balances, reputations, trust arrangements, data pertaining to information of the physical world; in short, anything that can currently be represented by a computer is admissible. Transactions thus represent a valid arc between two states; the ‘valid’ part is important. A valid state transition is one which comes about through a transaction. Formally:
 \begin{equation}
@@ -87,7 +104,150 @@ In term of implementation, there are many choices of blockchains: over 200 Bitco
 
 The Crypto-Spatial framework, described in this contribution, is designed for the Ethereum Blockchain and propose a set of smart contracts for the execution layer and a cheap geometry storage solution on IPFS for the application layer.
 
-\subsection{Ethereum smart contracts security issues}\label{sec:Ethereum smart contracts security issues}
+\subsection{IPFS and OrbitDB}\label{sec:IPFS and OrbitDB}
+
+IPFS is a distributed file system which synthesizes successful ideas from many peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the web itself. IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. [Benet, J. (2014). IPFS-content addressed, versioned, P2P file system. arXiv preprint arXiv:1407.3561.]
+
+OrbitDB. It is a distributed, peer-to-peer database that is built on top of IPFS [60]. OrbitDB supports various kinds of databases including key-value and log databases. This makes OrbitDB an excellent choice for the decentralized prototype. 
+
+In the solution we present in this contribution, the geometry of spatial features are stored in GlobalDB as GeoJSON objects for simple parsing and visualisation. The databases also have listeners implemented that triggers when the databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent geometry available. [OrbitDB. OrbitDB. url: https://github.com/orbitdb/orbit-db/].
+
+
+\subsection{Decentralized applications developpement}\label{sec:Decentralized applications developpement}
+
+Ethereum blockchain can be viewed as a transaction-based state machine: we begin with a genesis state and incrementally execute transactions to morph it i
+
+Add process and explanation
+
+\newpage
+
+\section{THE CRYPTO-SPATIAL FRAMEWORK}\label{sec:THE CRYPTO-SPATIAL FRAMEWORK}
+
+The Crypto-Spatial Framework is a set of smart contracts written in Solidity (programming language for Ethereum) which serves as base classes, like in Object Oriented Programming, that can be inherited and specilized to meet busienss needs. The architecture of the Crypto-Spatial smart constracts is inspired from OGC Simple Features specifications. 
+
+To uniquely identify spatial features on the distributed ledger the FOAM space [foam.space] concept of CryptoSpatial Coordinate (CSC) was used. Nevertheless, some modifications was implemented to explore the alternatives suggested by the [OGC discussion paper (7.5)-18-041r1.html] as the use of the H3 javascript library [uber.github.io/h3/], with the resolution 15 (Average Hexagon Edge Length  of 0.5 km), which it is a partially conforming implementation of the [Geodesic Discrete Global Grid Systems-http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf) OGC standard.
+
+\subsection{Framework Design}\label{sec:Framework Design}
+
+The Crypto-Spatial smart contracts library, illustrated in the following class diagram, is designed and implemented using inheritance and interfaces to simplify its resusability.
+
+% KAO: Remove spacing before label: can cause reference to be wrong
+\begin{figure}[ht!]
+\begin{center}
+		\includegraphics[width=1.0\columnwidth]{figures/class-crypto-spatial-lib.png}
+	\caption{Crypto-Spatial Library Class Diagram}
+\label{fig:figure_placement}
+\end{center}
+\end{figure}
+
+The main goal of this project is to deliver a framework of geospatially enabled smart contracts and libraries for secure Geo-dApps developement. 
+
+1. The developper should be able to use a deployed `geospatial` smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum addresses.
+
+1. The developper should be able to inherit/use the Solidity components to build his custom contracts and develop more complex decentralized systems. 
+
+1. The developper should be able to integrate/donwload the solidity reusable components (contacts) from [npm](https://www.npmjs.com/) and/or [ethPM](https://www.ethpm.com/) as standalone packages or included in a widely accepted library, like [openZeppelin](https://openzeppelin.com/contracts/).
+
+1. The developper should be able to visualize on a map all the gospatial features stored on the permanently deployed registry (as features index) to administer the features belonging to his regitries.
+
+1. The developper should be able to access a fully featured dasboard displaying all useful information about the permanently deployed features registries (the features index).   
+
+1. The developper should be able to interact with the features index with the [OGC OpenAPI REST API](http://docs.opengeospatial.org/wp/16-019r4/16-019r4.html) to discover and fetch content.
+
+\subsubsection{CSFeature}\label{sec:CSFeature}
+
+The library design, inspired from OGC Simple Features, comprises a base abstract CSFeature smart contract to represent any type of spatial features. This smart contract is specialized to hanldle Points, Curves and Surfaces with the CSCurve, CSPoint and the CSSurface smart contracts respectively.
+
+The CSFeature smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Formally :
+
+\textbf{csc :} the Crypto-Spatial Coordinate, which is the Keccak-256 hash of the DGGS index of the spatial feature and the owner address.
+
+\textbf{wkbHash :} the Well Known Binary Hash of the spatial feature GeoJSON geometry.
+
+\textbf{dggsIndex :} the Disrcete Global Geodetic System index of the spatial feature.
+
+\textbf{h3Resolution :} the H3 resolution used for the spatial feature.
+
+\textbf{CSGeometryType :} the geometry type of the spatial feature (Point, Curve, Surface).
+
+\textbf{constructor :} the constructor that initiate all state variables.
+
+\textbf{getGeometryType :} getter for geometry type.
+
+\textbf{getFeatureCSC :} getter for CSC.
+
+\textbf{getFeatureDGGSIndex :} getter for DGGS Index.
+
+\textbf{fetchFeature :} fetch all the state variables of the feature
+
+\textbf{setWkbHash :} setter for wkbHash.
+
+\textbf{kill :} to permanently remove the spatial feature from the blockchain ledger.
+
+\subsubsection{CSFeatureRegistry}\label{sec:CSFeatureRegistry}
+
+The second important abstract smart contract of the Crypto-Spatial core library design is the CSFeatureRegistry which serves as the spatial features collection. 
+The CSFeatureRegistry smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Formally :
+
+\textbf{h3Resolution :} the H3 resolution of the spatial feature registry (from 1 to 15) see [.....].
+
+\textbf{name :} the displayed name.
+
+\textbf{srs :} the Spatial Reference System code (EPSG or equivalent).
+
+\textbf{featuresCount :} the Counter of the added features.
+
+\textbf{features :} an addresses mapping to handle the spatial features added to the registry.
+
+\textbf{addedIndexes :} a boolean mapping to keep trace of added indexes.
+
+\textbf{indexOwner :} a mapping to keep trace of DGGS indexes owners.
+
+\textbf{constructor :} the constructor that initiate all state variables.
+
+\textbf{addFeature :} a modifier that must be called by the addFeature function of inherited smart contract.
+
+\textbf{getFeatureCount :} getter of the featureCount.
+
+\textbf{getFeature :} getter for a designated spatial feature.
+
+\textbf{dggsIndexExist :} to confirm if an Index exist in the registry.
+
+\textbf{dggsIndexOwner :} returns the owner of a designated feature.
+
+\textbf{removeFeature :} permanently remove the spatial fetaure from the registry and the blockchain ledger.
+
+\subsection{Solidity Implementation}\label{sec:Solidity Implementation}
+
+To demonstrate the suitability of the previous design, the smart contracts laibrary has been implemented using the Solidity programming language and the Truffle suite. Herafter, a code snipet of the addFeature modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
+
+\begin{verbatim}
+modifier 
+addFeature(bytes15 dggsIndex, 
+		   bytes32 wkbHash, 
+		   address _sender) {
+  require(!paused(), "Contract is paused");
+  require(dggsIndex.length != 0, "Empty dggsIndex");
+  require(addedIndexes[dggsIndex] == false, 
+  			"DGSS Index already exist");
+  require(wkbHash.length != 0, "Empty wkbHash");
+
+  _;
+
+  addedIndexes[dggsIndex] = true;
+  indexOwner[dggsIndex] = _sender;
+  bytes32 csc = CSGeometryLib.computeCSCIndex(_sender, 
+  							dggsIndex); 
+  emit LogNewFeatureAdded(name, csc, dggsIndex, 
+  				wkbHash, _sender);
+  featuresCount = featuresCount.add(1);
+}
+\end{verbatim}
+
+The complete implementation of the Crypto-Spatial framework can be found on the following github repository.
+https://github.com/allilou/onchain-land-administration/tree/master/solidity/contracts/geospatial
+
+\subsection{Security and design patterns}\label{sec:Security issues and design patterns}
 
 In this section we systematize the security vulnerabilities of Ethereum smart
 contracts. We group the vulnerabilities in three classes, according to the level
@@ -97,64 +257,123 @@ All these vulnerabilities can be (actually, most of them have been) exploited to
 carry on attacks which e.g. steal money from contracts. Table 1 summarizes our
 taxonomy of vulnerabilities, with links to the attacks illustrated in Section 4.
 
-\subsection{IPFS and OrbitDB}\label{sec:IPFS and OrbitDB}
+\subsubsection{Security issues mitigation}\label{sec:Security issues mitigation}
 
-To store cheaply Geometry data OrbitDB storage based on IPFS technology is used in combination with on-chain smart contracts.
- 
-IPFS is a distributed file system which synthesizes successful ideas from many peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the web itself. IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. [Benet, J. (2014). IPFS-content addressed, versioned, P2P file system. arXiv preprint arXiv:1407.3561.]
+As smart contracts are immutable code taht execute in decentralized paradigm a set of strategies to avoid common attacks has to be used. [https://blog.sigmaprime.io/solidity-security.html) 
 
-OrbitDB. It is a distributed, peer-to-peer database that is built on top of IPFS [60]. OrbitDB supports various kinds of databases including key-value and log databases. This makes OrbitDB an excellent choice for the decentralized prototype. 
+rithmetic Over/Under Flows
+To guard against under/overflow vulnerabilities we use the openZeppelin ```SafeMath``` mathematical library for the state variable ```featuresCount (uint256)``` in the [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol).
 
-The bids are stored in GlobalDB as JSON objects for simple parsing to extract
-the data. The databases also have listeners implemented that triggers when the
-databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent bids available.
-In figure 3.7 the database architecture is shown.
-[OrbitDB. OrbitDB. url: https://github.com/orbitdb/orbit-db/ (visited
-on 2018-05-12).]
+Security tools
+MythX
+Having some trouble using the command line analysis `truffle run verify`, the MythX Visual Studio Code was used instead.
+The full report highlight two low severity issues described bellow. 
 
+Detected Issues
 
-\subsection{Blockchain business models}\label{sec:Blockchain business models}
+| 0 High | 0 Medium | 2 Low |
+|--------|----------|-------|
 
-The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
-
-\subsection{Blockchain developer tools}\label{sec:Blockchain developer tools}
-
-The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
+| ID | Severity |  Name | File | Location |
+|----|----------|-------|------|----------|
+|SWC-103| Low| Floating Pragma |CSFeatureRegistry.sol |L: 9 C: 0 |
+|SWC-108 |Low|State Variable Default Visibility|CSFeatureRegistry.sol |L: 30 C: 10|
 
 
+Mythril
+Knowing that the free version of MythX don't analyze all the security vulnerabilities, the `mythril` tool was also used to check the smart contracts of this project.
 
-\section{THE CRYPTO-SPATIAL FRAMEWORK}\label{sec:THE CRYPTO-SPATIAL FRAMEWORK}
+Unfortunately, the latest version (v0.21.20) of this tool don't returns any analysis result.
+```
+mythril always retuns  The analysis was completed successfully. No issues were detected.
+```
+We tried with docker (on Debian Linux / windows 10) and with the python installed version of mythril, we get the same result !!!. The log was :
+```
 
-\subsection{Title}\label{sec:Title}
+Desperate from using `mythril`, the `slither` tool was used and returns the following results.
 
-The title should appear centered in bold capital letters, at the top of the 
-first page of the paper with 
+```
+INFO:Slither:./contracts/LAParcelRegistry.sol analyzed (13 contracts with 40 detectors), 36 result(s) found
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
 
-FOAM Protocole White paper
+```
 
-OGC Open standards 
+\subsubsection{Design patterns}\label{sec:Design patterns}
 
-Geodesic Discrete Global Grid Systems
-
-
-Desgin class diagram 
-
-Implementation - Solidity 
+As smart contracts are special immutable code executing on the Ethereum blockchain, a number of design patterns has to be applied to guarantee they are correctly prepared for all situations. This include :
 
 
+Fail early and fail loud
+In the smart contracts of this project we check the condition required for execution (by using  ```require()```) as early as possible in the function body and throws an exception if the condition is not met . Those exeptions are also confirmed by the tests. 
+
+Restricting Access
+The acces to the smart contract functions that change the states is restricted using the openZeppelin library. In fact :
+
+- [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) inherit from ```Ownable``` and use ```Roles``` to limit acces to setters and the ```kill``` function.
+
+- In [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol) access to ```removeFeature``` function is also limited to admins declared in the constructor. 
+
+In addition, the acces to the state variable of the [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) smart contract is restricted to ```internal```.
+
+Mortal
+The [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) allow autodestruction which remove it definitly from the blockchain using the  ```removeFeature``` function.
+
+Auto Deprecation
+
+The auto deprecation design pattern is not used. We prefere using ```Pausable```. 
+
+Circuit Breaker
+The [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol) inherit from the openZeppelin ```Pausable``` contract which allow pausing the smart contract from adding and removing features from the registry.  
+
+Inheritance and interfaces 
+The geospatial library part of this project, illustrated in the following class diagram, is designed and implemented using inheritance and interfaces to simplify its resusability.
 
 
+\newpage
 \section{DECENTRALIZED LAND ADMINISTRATION}\label{sec:DECENTRALIZED LAND ADMINISTRATION}
 
 Type text single-spaced, \textbf{with} one blank line between paragraphs and 
 following headings. Start paragraphs flush with left margin.
 
-
 \subsection{The workflow}\label{sec:The workflow}
 
 % KAO: Remove explicit newlines in this section
-Major headings are to be centered, in bold capitals without 
-underlining, after two blank lines and followed by a one blank line.
+
+DeLA plateform is a Decentrelized Application (dApp) for Land Administration built for the Ethereum blockchain. It comprises 03 components :
+
+
+%\itemize
+\begin{enumerate}
+\setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
+\item{The smart contracts written in Solidity} 
+\item{The IPFS/OrbitDB Storage }
+\item{The frontend web application built with react.js}
+\end{enumerate}
+
+
+The land registry and real estate transactions is one area where security and transparency are important and where there is a high level of value, but where the required transaction speed and the number of transactions is significantly lower. People who have looked at this area, like the [Economist](https://www.economist.com/leaders/2015/10/31/the-trust-machine), understand that the value for society may be enormous — not least in countries that lack stable institutions such as legal systems, land registries, etc.
+
+The aim of this project is to implement the [ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html) on the Ethereum Blockchain.
+
+The starting point for that will be the [Solutions for Open Land Administration (SOLA-FAO)](https://github.com/SOLA-FAO/) which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, facilitating the essential customization always required to meet specific country needs, as Cadastre and registration functions and services are always provided by a typical land office.
+
+One of the major goals for porting this land registry solution to the etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
+
+For the frontend, the [Leaflet](https://leafletjs.com/) library is used to display a map with a markers representing the added indexes.
+
+
+
+\section{BLOCKCHAIN BUSINESS MODELS}\label{sec:BLOCKCHAIN BUSINESS MODELS}
+
+
+The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
+
+
+\section{CONCLUSION}\label{sec:CONCLUSION}
+
+The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
+
+Porting to Hyperledger fabric 
 
 
 \section*{ACKNOWLEDGEMENTS (Optional)}\label{ACKNOWLEDGEMENTS}
