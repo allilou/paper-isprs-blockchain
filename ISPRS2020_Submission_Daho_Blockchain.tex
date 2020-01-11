@@ -219,7 +219,7 @@ The CSFeatureRegistry smart contract includes all necessary state variables, mod
 
 \subsection{Solidity Implementation}\label{sec:Solidity Implementation}
 
-To demonstrate the suitability of the previous design, the smart contracts laibrary has been implemented using the Solidity programming language and the Truffle suite. Herafter, a code snipet of the addFeature modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
+To demonstrate the suitability of the previous design, a smart contracts library has been implemented using the Solidity programming language and the Truffle Suite. Herafter, a code snipet of the \textbf{addFeature} modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
 
 \begin{verbatim}
 modifier 
@@ -330,44 +330,90 @@ The geospatial library part of this project, illustrated in the following class 
 
 
 \newpage
-\section{DECENTRALIZED LAND ADMINISTRATION}\label{sec:DECENTRALIZED LAND ADMINISTRATION}
+\section{DECENTRALIZED APPLICATIONS}\label{sec:DECENTRALIZED APPLICATIONS}
 
-Type text single-spaced, \textbf{with} one blank line between paragraphs and 
-following headings. Start paragraphs flush with left margin.
+Knowing that smart contracts takes only in charge the immutable part of the business logic of an application, it is also necessary to implement a front end application to interact with the final user, set/get state variables and make calls to smart contracts functions. In the Ethereum techspace, this is generally done using ReactJS with the web3 javascript library. To build a geospatially enabled decentralized application (dApp), integrating webmapping components with web3 enabled User Interface (UI) is necessary.
+ 
+\subsection{Geospatial dApps Architecture}\label{sec:Geospatial dApps Architecture}
 
-\subsection{The workflow}\label{sec:The workflow}
-
-% KAO: Remove explicit newlines in this section
-
-DeLA plateform is a Decentrelized Application (dApp) for Land Administration built for the Ethereum blockchain. It comprises 03 components :
-
+To buikd Geospatially enabed dApps for the Ethereum blockchain the following 3-tiers architecture is recommanded. Formally:
 
 %\itemize
 \begin{enumerate}
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
-\item{The smart contracts written in Solidity} 
-\item{The IPFS/OrbitDB Storage }
-\item{The frontend web application built with react.js}
+\item{The smart contracts written in Solidity.} 
+\item{The IPFS/OrbitDB Storage.}
+\item{The frontend web application built with ReactJS.}
 \end{enumerate}
 
+The generic interaction between the previous components of a Geospatial dApp can be described by the sequence diagram on figure [].
 
-The land registry and real estate transactions is one area where security and transparency are important and where there is a high level of value, but where the required transaction speed and the number of transactions is significantly lower. People who have looked at this area, like the [Economist](https://www.economist.com/leaders/2015/10/31/the-trust-machine), understand that the value for society may be enormous — not least in countries that lack stable institutions such as legal systems, land registries, etc.
+% KAO: Remove spacing before label: can cause reference to be wrong
+\begin{figure}[ht!]
+\begin{center}
+		\includegraphics[width=1.0\columnwidth]{figures/seq-geospatial-dapps.png}
+	\caption{Geospatial dApps sequence Diagram}
+\label{fig:figure_placement}
+\end{center}
+\end{figure}
 
-The aim of this project is to implement the [ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html) on the Ethereum Blockchain.
+The choice to store the geometries of the spatial features is justified by the gas cost of the storage on the Ethereum Blockchain. It cheaper to store the Well Known Binary (WKB) hash on the Blockchain and the WKB of the spatial feature geometry on OrbitDB/IPFS.
 
-The starting point for that will be the [Solutions for Open Land Administration (SOLA-FAO)](https://github.com/SOLA-FAO/) which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, facilitating the essential customization always required to meet specific country needs, as Cadastre and registration functions and services are always provided by a typical land office.
+\subsection{Decentralized land administration (DeLA)}\label{sec:Decentralized land administration (DeLA)}
+
+As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application (dApp), we built a dApp aiming to manage Land Administration on the Ethereum blockchain based on the Solutions for Open Land Administration (SOLA-FAO)](https://github.com/SOLA-FAO/) which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html).
 
 One of the major goals for porting this land registry solution to the etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
 
-For the frontend, the [Leaflet](https://leafletjs.com/) library is used to display a map with a markers representing the added indexes.
+The source code of this dApp is available on [https://github.com/allilou/onchain-land-administration] and a working version, deployed on the Rinkeby testnet, is available on [https://allilou.github.io/onchain-land-administration/].
+
+The class diagram on figure [] illustrate the inheritance mecanism used the easily implement specific business logic with solidity smart contracts.
+
+\begin{figure}[ht!]
+\begin{center}
+		\includegraphics[width=1.0\columnwidth]{figures/class-dela.png}
+	\caption{DeLA class Diagram}
+\label{fig:figure_placement}
+\end{center}
+\end{figure}
 
 
 
 \section{BLOCKCHAIN BUSINESS MODELS}\label{sec:BLOCKCHAIN BUSINESS MODELS}
 
+The adoption of the proof-of-concept described in this contribution can open many business opportunities as those described bellow and inspired from [Top 7 Blockchain Business Models That You Should Know About](https://101blockchains.com/blockchain-business-models/).
 
-The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
 
+\subsection{Developement plateform}\label{sec:Developement plateform}
+
+The main goal of this project is to deliver a framework of geospatially enabled smart contracts and libraries for secure Geo-dApps developement. It will provide implementations of standards like [OGC Simple Features Access](http://portal.opengeospatial.org/files/artifactid=25355), [OGC Discrete Global Grid Systems](https://www.opengeospatial.org/projects/groups/dggsswg), [ISO 19107 Geographic information — Spatial schema](https://www.iso.org/standard/66175.html?browse=tc) and the [FOAM protocol](https://foam.space/publicAssets/FOAMWhitepaper.pdf).
+
+The smart contracts and libraries can be deployed, as-is or extended to suit business needs, as well as Solidity components to build custom contracts and more complex decentralized systems. 
+
+After reaching certain maturity, an  application will be made for this framework as a candidate to [OpenZeppelin](https://openzeppelin.com/) smart contracts.
+
+\subsection{Blockchain as a service (BaaS)}\label{sec:Blockchain as a service (BaaS)}
+
+To fully operate the DeLA platform, a set of permanently deployed components are required. In addition to the geospatially enabled smart contracts and libraries deployed on the Etheruem network (test in the developpement phase and mainet after) the platform will require : 
+1. a mapping server with its geospatial database to store the spatial features (The Feature Index). The early odpoted solution is a locally stored [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) database and [GeoJSON](https://geojson.org/) fetching requests for visualisation purposes. But to reach the required scalability in the futur, the final plateform will probably be implemented using [PostgreSQL database](https://www.postgresql.org/), [PostGIS middleware](https://postgis.net) and [Geoserver](http://geoserver.org/) as webmapping server.  
+2. a backend web server to manage business logic tasks, mainly the smart contracts events handling needed to catch the ledger recorded spatial features and populate the Features Index (database). This component will implement the [OGC OpenAPI API](http://docs.opengeospatial.org/wp/16-019r4/16-019r4.html) standard to discover and fetch features.
+3. a frontend web server to store and publish the platform Dashboard Application. 
+
+The components 1 and 2 are by design a shared services that can be easily montized for further integration in custom blockchain geospatially enabled applications, without the need to redeploy them. The deploiment diagram below illustrate this strategy.
+
+![](./diagrams/exports/deploy-crypto-spatial-lib/deploy-crypto-spatial-lib.png)
+
+
+\subsection{Blockchain based Software products}\label{sec:Blockchain based Software products}
+
+The [DeLA](../README.md) (Decentralized Land Administration) platform developed in this repository is the first prototype built as a proof-of-concept for geospatially enabled application.
+
+The aim of this pilot project is manage a crawd sourced Land Registry design in conformance with the [ISO 19152:2012 - Geographic information — Land Administration Domain Model (LADM)](https://www.iso.org/standard/51206.html?browse=tc).
+
+This prototype will serve as a fully operationnal demonstation of the proposed concepts and implementations, and could therefore be used in a variety of tastes, including :
+- Permissionless/Permissioned application for governmental agencies responsible for land adminsitration and lacking critical ressources to undertake there missions as described in the [FAO Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries and Forests in the Context of National Food Security](http://www.fao.org/tenure/voluntary-guidelines/en/).
+- An open data crowd sourcing plateform, OpenStreetMap like, delivering useful land parcel informations where no autoritative or commerical data are available. see [Open Land Data in the Fight Against Corruption - Discussion Report - landportal.org](https://landportal.org/file/47749/download) for more informations.
+- A building block for specfic business case dApps using land information like Real estate, Investments valuation, Social responsbility, Envirmental protection, Disaster management ... 
 
 \section{CONCLUSION}\label{sec:CONCLUSION}
 

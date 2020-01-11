@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  11 JAN 2020 00:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  11 JAN 2020 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,7 +423,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-(./ISPRS2020_Submission_Daho_Blockchain.aux)
+(./ISPRS2020_Submission_Daho_Blockchain.aux
+
+LaTeX Warning: Label `sec:DECENTRALIZED APPLICATIONS' multiply defined.
+
+
+LaTeX Warning: Label `fig:figure_placement' multiply defined.
+
+
+LaTeX Warning: Label `fig:figure_placement' multiply defined.
+
+)
 \openout1 = `ISPRS2020_Submission_Daho_Blockchain.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -441,8 +451,7 @@ LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -597,7 +606,7 @@ Underfull \hbox (badness 2990) in paragraph at lines 128--129
 \OT1/ptm/m/n/9.25 of 0.5 km), which it is a par-tially con-form-ing im-ple-
  []
 
-<figures/class-crypto-spatial-lib.png, id=99, 570.13pt x 498.86375pt>
+<figures/class-crypto-spatial-lib.png, id=115, 570.13pt x 498.86375pt>
 File: figures/class-crypto-spatial-lib.png Graphic file (type png)
 <use figures/class-crypto-spatial-lib.png>
 Package pdftex.def Info: figures/class-crypto-spatial-lib.png  used on input li
@@ -752,72 +761,237 @@ egistry.sol)
  []
 
 [4]
-Underfull \hbox (badness 1087) in paragraph at lines 354--355
-\OT1/ptm/m/n/9.25 where se-cur-ity and trans-par-ency are im-port-ant and where
+<figures/seq-geospatial-dapps.png, id=130, 520.94624pt x 426.59375pt>
+File: figures/seq-geospatial-dapps.png Graphic file (type png)
+<use figures/seq-geospatial-dapps.png>
+Package pdftex.def Info: figures/seq-geospatial-dapps.png  used on input line 3
+54.
+(pdftex.def)             Requested size: 233.31252pt x 191.05411pt.
 
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 354--355
-\OT1/ptm/m/n/9.25 there is a high level of value, but where the re-quired
- []
-
-
-Overfull \hbox (9.65428pt too wide) in paragraph at lines 354--355
-\OT1/ptm/m/n/9.25 [Economist](https://www.economist.com/leaders/2015/10/31/the-
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-[]\OT1/ptm/m/n/9.25 The aim of this pro-ject is to im-ple-ment the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-\OT1/ptm/m/n/9.25 [ISO 19152:2012 stand-ard (Geo-graphic in-form-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-\OT1/ptm/m/n/9.25 a-tion | Land Ad-min-is-tra-tion Do-main Model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-\OT1/ptm/m/n/9.25 (LADM))](https://www.iso.org/standard/51206.html) on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 []\OT1/ptm/m/n/9.25 One of the ma-jor goals for port-ing this land re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 \OT1/ptm/m/n/9.25 gistry solu-tion to the eth-erum block-chain is the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 \OT1/ptm/m/n/9.25 abil-ity to use it as a [crowd sourcing land re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 \OT1/ptm/m/n/9.25 gistry plateform](http://www.fao.org/tenure/voluntary-
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 360--361
+Underfull \hbox (badness 4556) in paragraph at lines 366--367
 \OT1/ptm/m/n/9.25 guidelines/en/) to col-lect ten-ure re-la-tion-ships and as a
 
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 360--361
+Underfull \hbox (badness 1137) in paragraph at lines 366--367
 \OT1/ptm/m/n/9.25 so to pro-tect the in-di-vidual and col-lect-ive rights of th
 eir
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+[]\OT1/ptm/m/n/9.25 The source code of this dApp is avail-able on
+ []
+
+<figures/class-dela.png, id=131, 395.4775pt x 484.81125pt>
+File: figures/class-dela.png Graphic file (type png)
+<use figures/class-dela.png>
+Package pdftex.def Info: figures/class-dela.png  used on input line 374.
+(pdftex.def)             Requested size: 233.31252pt x 286.01396pt.
+
+Underfull \hbox (badness 3803) in paragraph at lines 384--385
+\OT1/ptm/m/n/9.25 The ad-op-tion of the proof-of-concept de-scribed in this
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+\OT1/ptm/m/n/9.25 con-tri-bu-tion can open many busi-ness op-por-tun-it-ies
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 384--385
+\OT1/ptm/m/n/9.25 as those de-scribed bel-low and in-spired from [Top 7
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+\OT1/ptm/m/n/9.25 Block-chain Busi-ness Mod-els That You Should Know
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+\OT1/ptm/m/n/9.25 About](https://101blockchains.com/blockchain-business-
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 The main goal of this pro-ject is to de-liver a frame-work
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 of geo-spa-tially en-abled smart con-tracts and lib-rar-ies f
+or
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 se-cure Geo-dApps de-velope-ment. It will provide im-ple-
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 ment-a-tions of stand-ards like [OGC Simple Fea-tures Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 cess](http://portal.opengeospatial.org/files/artifactid=25355
+),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 [OGC Dis-crete Global Grid Sys-
+ []
+
+
+Overfull \hbox (7.68423pt too wide) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 tems](https://www.opengeospatial.org/projects/groups/dggsswg)
+,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 [ISO 19107 Geo-graphic in-form-a-tion | Spa-tial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 schema](https://www.iso.org/standard/66175.html?browse=tc)
+ []
+
+
+Overfull \hbox (72.15556pt too wide) in paragraph at lines 389--390
+\OT1/ptm/m/n/9.25 and the [FOAM pro-tocol](https://foam.space/publicAssets/FOAM
+Whitepaper.pdf). 
+ []
+
+[5 <./figures/seq-geospatial-dapps.png (PNG copy)> <./figures/class-dela.png (P
+NG copy)>]
+Underfull \hbox (badness 4048) in paragraph at lines 393--394
+[]\OT1/ptm/m/n/9.25 After reach-ing cer-tain ma-tur-ity, an ap-plic-a-tion will
+ be
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 393--394
+\OT1/ptm/m/n/9.25 made for this frame-work as a can-did-ate to [Open-Zep-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/ind
+ex)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 data-base and [GeoJSON](https://geojson.org/) fetch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 ing re-quests for visu-al-isa-tion pur-poses. But to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 reach the re-quired scalab-il-ity in the fu-tur, the fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 nal plate-form will prob-ably be im-ple-men-ted us-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 [Post-gr-eSQL data-base](https://www.postgresql.org/),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 [Post-GIS mid-dle-ware](https://postgis.net) and [Geo-
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 the smart con-tracts events hand-ling needed to catch the
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 In-dex (data-base). This com-pon-ent will im-ple-ment the
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 397--401
+\OT1/ptm/m/n/9.25 [OGC OpenAPI API](http://docs.opengeospatial.org/wp/16-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+[]\OT1/ptm/m/n/9.25 ![](./diagrams/exports/deploy-crypto-spatial-lib/deploy-cry
+pto-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+[]\OT1/ptm/m/n/9.25 The aim of this pi-lot pro-ject is man-age a crawd
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+\OT1/ptm/m/n/9.25 sourced Land Re-gistry design in con-form-ance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+\OT1/ptm/m/n/9.25 with the [ISO 19152:2012 - Geo-graphic in-form-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+\OT1/ptm/m/n/9.25 a-tion | Land Ad-min-is-tra-tion Do-main Model
+ []
+
+
+Overfull \hbox (5.72348pt too wide) in paragraph at lines 411--412
+\OT1/ptm/m/n/9.25 (LADM)](https://www.iso.org/standard/51206.html?browse=tc). 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--417
+\OT1/ptm/m/n/9.25 Security](http://www.fao.org/tenure/voluntary-guidelines/en/)
+.
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 413--417
+\OT1/ptm/m/n/9.25 like, de-liv-er-ing use-ful land par-cel in-form-a-tions wher
+e no
  []
 
 No file ISPRS2020_Submission_Daho_Blockchain.bbl.
@@ -825,27 +999,37 @@ No file ISPRS2020_Submission_Daho_Blockchain.bbl.
 Package caption Warning: Unused \captionsetup[table] on input line 26.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 443.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 443.
  (./ISPRS2020_Submission_Daho_Blockchain.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
-Package rerunfilecheck Info: File `ISPRS2020_Submission_Daho_Blockchain.out' ha
-s not changed.
-(rerunfilecheck)             Checksum: BC331D9C341C910A86B8AB4154C90ACE;1153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 443.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 443.
 
+
+Package rerunfilecheck Warning: File `ISPRS2020_Submission_Daho_Blockchain.out'
+ has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ISPRS2020_Submission_Daho_Blockchai
+n.out':
+(rerunfilecheck)             Before: B11DFF11BCFB22467BE791086D6366D8;1528
+(rerunfilecheck)             After:  62D88F8F23D9D2446AFB17748ED72055;1493.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47496pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 443.
  ) 
 Here is how much of TeX's memory you used:
- 9642 strings out of 494518
- 143901 string characters out of 6176312
- 255897 words of memory out of 5000000
- 13133 multiletter control sequences out of 15000+600000
+ 9669 strings out of 494518
+ 144551 string characters out of 6176312
+ 256146 words of memory out of 5000000
+ 13148 multiletter control sequences out of 15000+600000
  22950 words of font info for 55 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  42i,11n,39p,809b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -861,6 +1045,15 @@ aced by a fixed one
 pdfTeX warning (dest): name{Pi} has been referenced but does not exist, replace
 d by a fixed one
 
+pdfTeX warning (dest): name{subsubsection.5.0.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.0.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.0.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fon
@@ -872,11 +1065,11 @@ msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 t9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (5 pages, 163521 byt
+Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (6 pages, 218163 byt
 es).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
