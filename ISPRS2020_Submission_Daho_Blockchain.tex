@@ -32,7 +32,7 @@
 % KAO: Remove extra spacing
 \author{
  BENAHMED DAHO Ali\textsuperscript{1}
-\thanks{Corresponding author}}
+}
 
 % KAO: Remove extra newline
 \address{
@@ -50,10 +50,10 @@
 
 % KAO: Use times symbol
 \abstract{
-Blockchain is an emerging immature technology that disrupt many well established industries. In this contribution we present a smart contracts library, named Crypto-Spatial, written with Solidity for the Ethereum Blockchain and designed to serve as a framework for geospatial data decentrilized permanent storage and retrieviewal.Blockchain is an emerging immature technology that disrupt many well established industries. In this contribution we present a smart contracts library, named Crypto-Spatial, written with Solidity for the Ethereum Blockchain and designed to serve as a framework for geospatial data decentrilized permanent storage and retrieviewal.
+Blockchain is an emerging immature technology that disrupt many well established industries nowadays, like finance, supply chain, transportation, energy,  official registries (identity, vehicules, ...). In this contribution we present a smart contracts library, named Crypto-Spatial, written for the Ethereum Blockchain and designed to serve as a framework for geospatially enabled decentralized applications (dApps) developement. The main goal of this work is to investigate the suitability of Blockchain technology for the storge, retrieval and processing of vector geospatial data. The design and the proof-of-concept implementation presented are both based on the Open Geospatial Consortium standards, formally : Simple Feature Acces, Discrete Global Grid Systems (DGGS) and Well Known Binary (WKB). Also, the FOAM protocole concept of Crypto-Spatial Coordinate (CSC) was used to uniquely idenitify spatial features on the Blockchain immutable ledger. The desgin of the Crypto-Spatial framework was implemented as a set of smart contracts using the Solidity object oriented programming language. The implemented library was assessed toward Etheruem's best practices design patterns and known security issues (common attacks). Also, a generic architecture for geospatially enabled decentralized applications, combining blockchain and IPFS technologies, was proposed. Finally, a proof-of-concept was developped using the proposed approach which main pupose is to port the UN/FAO-SOLA  plateform to Blockchain techspace allowig more transparency and  simplifying access to users communities. The smart contracts of this prototype are live on the Rinkeby testnet and the frontend is hosted on Github pages. The source code of the work presented here is availaible on Github under Apache 2.0 licence.
 }
 
-\keywords{Ethereum Blockchain, Decentralized Applications, Smart Contracts, Ethereum, IPFS, OrbitDB, Land Administration, OGC Open Standards. 
+\keywords{Ethereum Blockchain, Decentralized Applications, Smart Contracts, IPFS, OrbitDB, Land Administration, OGC Open Standards, FOAM. 
 }
 
 \maketitle
@@ -65,14 +65,9 @@ Blockchain is an emerging immature technology that disrupt many well established
 % KAO: Sloppy spacing ensures non-overfull lines. Can be removed if this is not an issue.
 \sloppy
 
-Situation : Geospatial tech and data layers
-This project is challenging because it implements geospatial data management features, needed to handle land parcels, on the Blockchain technology, which is an open research subject at the [Open Geospatial Consortium](http://docs.opengeospatial.org/dp/18-041r1/18-041r1.html) where a [Blockchain and Distributed Ledger Technologies Domain Working Group](https://www.opengeospatial.org/projects/groups/bdltdwg) has been created especially for that.
+Geospatial technology is nowadays in the heart of major socio-economical processes giving experts and casual users valuable insights to improve there performances, optimize there daily tasks and make informed decisions. However, as for any industry sector, a growing number of deeptech technologies are emerging and disrupting well known workflows and established practices. In fact, the permeation of technologies such as IoT, Big Data Analytics, Cloud Computing, Artificial Intelligence, etc. have also greatly aided the spurt in adoption of Location Intelligence solutions [GeoBuiz-19 report]. Nevertheless, we noted that in the recent years, Blockchain technology has not been intensively investigated for its suitability to leverage geospatial applications, and it's just in july 2019 that the OGC announces the creation of a new Domain Working Group for Blockchain and Distributed Ledger Technologies (BDLT/DWG)[opengeospatial.org press 3016].
 
-
-Complications : Decentralization / Blockchain / market growth
-
-Question : Blockchain for geospatial 
-
+In addition, despite the existance of many initiatives to develop standardized protocols for geospatial technology on the blockchain, like [foam.space], [xyo.network], [helium.com], we notice that all those projects focus mainly on proof-of-location wireless networks and not on geospatial data structures and applications. To fill this gap, we investigate in this contribution the suitability of Blockchain technology for the storge, retrieval and processing of vector geospatial data. Also, a generic architecture for geospatially enabled decentralized applications, is proposed and a proof-of-concept is developped using the proposed approach.
 
 \newpage
 
@@ -110,14 +105,37 @@ IPFS is a distributed file system which synthesizes successful ideas from many p
 
 OrbitDB. It is a distributed, peer-to-peer database that is built on top of IPFS [60]. OrbitDB supports various kinds of databases including key-value and log databases. This makes OrbitDB an excellent choice for the decentralized prototype. 
 
-In the solution we present in this contribution, the geometry of spatial features are stored in GlobalDB as GeoJSON objects for simple parsing and visualisation. The databases also have listeners implemented that triggers when the databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent geometry available. [OrbitDB. OrbitDB. url: https://github.com/orbitdb/orbit-db/].
+In the solution we present in this contribution, the geometry of spatial features are stored in an OrbitDB IPFS database as OGC Well Known Binary objects for simple parsing and visualisation. The databases also have listeners implemented that triggers when the databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent geometry available. [OrbitDB. OrbitDB. url: https://github.com/orbitdb/orbit-db/].
 
 
-\subsection{Decentralized applications developpement}\label{sec:Decentralized applications developpement}
+\subsection{Decentralized applications developement}\label{sec:Decentralized applications developement}
 
-Ethereum blockchain can be viewed as a transaction-based state machine: we begin with a genesis state and incrementally execute transactions to morph it i
+Developping applications for the Blockchain is very similar to developing applications with traditional web technologies with some key differences. In fact knowing if an application need blockchain technology is as important as knowing blockchain technology itself. To do that a developer must asses its needs using the folowing key questions :
 
-Add process and explanation
+%\itemize
+\begin{enumerate}
+\setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
+\item{Is the system defining digital reationships? if yes, Blockchain is suitable for this system.} 
+\item{Should data be dynamic and auditable? if yes, Blockchain is suitable.}
+\item{Should data be managed by a central authority? if yes, Blockchain is not suitable in this case.}
+\item{Is the speed of the network important? if yes, Blockchain is also not suitable here.}
+\end{enumerate}
+
+The figure [] illustrate the developement workflow for an Ethereum Blockchain decentralized application.
+
+\begin{figure}[ht!]
+\begin{center}
+		\includegraphics[width=1.0\columnwidth]{figures/eth-dev-process.png}
+	\caption{Blockchain developement workflow}
+\label{fig:figure_placement}
+\end{center}
+\end{figure}
+  
+The proces start by creating an account using a wallet manager like Metamask [] or Uport [] and fund your account using a dedicated faucet for the selected testnet (Rinkeby, Ropsten, ...). If we develop locally we can just use ganache-cli [].
+
+As we start de developp our decentralized application we can use one of the ethereum smart contracts developpement tools like Truffle[]. Those tools allow us to compile, test and deploy our smart contracts on the testnet we select to use for our testing campaing before the ultimate deploiement on the Ethereum mainnet which require real Ether (cryptocurreny of Ethereum).
+
+For the frontend, we will need a web3 library depending on the programming kanguage we use. Nevertheless, in general in the Etheruem world the ReactJS framework is used to develop the User Interface (UI) with the web3.js library .
 
 \newpage
 
@@ -126,6 +144,8 @@ Add process and explanation
 The Crypto-Spatial Framework is a set of smart contracts written in Solidity (programming language for Ethereum) which serves as base classes, like in Object Oriented Programming, that can be inherited and specilized to meet busienss needs. The architecture of the Crypto-Spatial smart constracts is inspired from OGC Simple Features specifications. 
 
 To uniquely identify spatial features on the distributed ledger the FOAM space [foam.space] concept of CryptoSpatial Coordinate (CSC) was used. Nevertheless, some modifications was implemented to explore the alternatives suggested by the [OGC discussion paper (7.5)-18-041r1.html] as the use of the H3 javascript library [uber.github.io/h3/], with the resolution 15 (Average Hexagon Edge Length  of 0.5 km), which it is a partially conforming implementation of the [Geodesic Discrete Global Grid Systems-http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf) OGC standard.
+
+Also, the FOAM protocole concept of Crypto-Spatial Coordinate (CSC) was used to uniquely idenitify spatial features on the Blockchain immutable ledger with some customization of the nominal foam.space specifiations to meet OGC Blockchain and Distributed Ledger Technologies Domain Working Group recommandations.
 
 \subsection{Framework Design}\label{sec:Framework Design}
 
@@ -142,9 +162,9 @@ The Crypto-Spatial smart contracts library, illustrated in the following class d
 
 The main goal of this project is to deliver a framework of geospatially enabled smart contracts and libraries for secure Geo-dApps developement. 
 
-1. The developper should be able to use a deployed `geospatial` smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum addresses.
+1. The developer should be able to use a deployed `geospatial` smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum addresses.
 
-1. The developper should be able to inherit/use the Solidity components to build his custom contracts and develop more complex decentralized systems. 
+1. The developer should be able to inherit/use the Solidity components to build his custom contracts and develop more complex decentralized systems. 
 
 1. The developper should be able to integrate/donwload the solidity reusable components (contacts) from [npm](https://www.npmjs.com/) and/or [ethPM](https://www.ethpm.com/) as standalone packages or included in a widely accepted library, like [openZeppelin](https://openzeppelin.com/contracts/).
 
@@ -361,6 +381,8 @@ The choice to store the geometries of the spatial features is justified by the g
 
 \subsection{Decentralized land administration (DeLA)}\label{sec:Decentralized land administration (DeLA)}
 
+(United Nations Food and Agriculture Organisation - Solutions for Open Land Administration)
+
 As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application (dApp), we built a dApp aiming to manage Land Administration on the Ethereum blockchain based on the Solutions for Open Land Administration (SOLA-FAO)](https://github.com/SOLA-FAO/) which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html).
 
 One of the major goals for porting this land registry solution to the etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
@@ -378,6 +400,17 @@ The class diagram on figure [] illustrate the inheritance mecanism used the easi
 \end{figure}
 
 
+\begin{verbatim}
+function
+addParcel()
+}
+\end{verbatim}
+
+
+Javascript libraries used 
+Leaflet ....
+...
+
 
 \section{BLOCKCHAIN BUSINESS MODELS}\label{sec:BLOCKCHAIN BUSINESS MODELS}
 
@@ -394,7 +427,7 @@ After reaching certain maturity, an  application will be made for this framework
 
 \subsection{Blockchain as a service (BaaS)}\label{sec:Blockchain as a service (BaaS)}
 
-To fully operate the DeLA platform, a set of permanently deployed components are required. In addition to the geospatially enabled smart contracts and libraries deployed on the Etheruem network (test in the developpement phase and mainet after) the platform will require : 
+To fully operate the DeLA platform, a set of permanently deployed components are required. In addition to the geospatially enabled smart contracts and libraries deployed on the Etheruem network (test in the developement phase and mainet after) the platform will require : 
 1. a mapping server with its geospatial database to store the spatial features (The Feature Index). The early odpoted solution is a locally stored [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) database and [GeoJSON](https://geojson.org/) fetching requests for visualisation purposes. But to reach the required scalability in the futur, the final plateform will probably be implemented using [PostgreSQL database](https://www.postgresql.org/), [PostGIS middleware](https://postgis.net) and [Geoserver](http://geoserver.org/) as webmapping server.  
 2. a backend web server to manage business logic tasks, mainly the smart contracts events handling needed to catch the ledger recorded spatial features and populate the Features Index (database). This component will implement the [OGC OpenAPI API](http://docs.opengeospatial.org/wp/16-019r4/16-019r4.html) standard to discover and fetch features.
 3. a frontend web server to store and publish the platform Dashboard Application. 
@@ -417,13 +450,26 @@ This prototype will serve as a fully operationnal demonstation of the proposed c
 
 \section{CONCLUSION}\label{sec:CONCLUSION}
 
-The maximum paper length is restricted to 8 pages. Invited papers can be increased to 12 pages. 
+This chapter should draw together all the issues of the research and link back to the aim and objectives, which were outlined in the Introduction and Methodology. 1. Have the aims set at the beginning been met? If not, why not?
+2. Evaluate how your findings bear on issues or points raised in the Literature Review.
+3. What are the implications arising from the findings. Be careful with your generalisations and your interpretations. Recommendations should be based on evidence.
+4. Do you have suggestions for future research in this area?
 
 Porting to Hyperledger fabric 
 
+EIP
 
-\section*{ACKNOWLEDGEMENTS (Optional)}\label{ACKNOWLEDGEMENTS}
+OpenZeppilin
+
+
+\section*{ACKNOWLEDGEMENTS}\label{ACKNOWLEDGEMENTS}
 Acknowledgements of support for the project/paper/author are welcome. 
+
+Africa Blockchain Alliance
+
+In this sections you should express thanks to those who assisted you in your research. These should be kept
+to a minimum and include academic supervisors and people who participated in the fieldwork, any funding
+bodies and probably a long-suffering spouse, friend or relative.
 
 {
 	\begin{spacing}{1.17}
@@ -432,12 +478,5 @@ Acknowledgements of support for the project/paper/author are welcome.
 	\end{spacing}
 }
 
-
-\section*{APPENDIX (Optional)}\label{APPENDIX}
-
-Any additional supporting data may be appended, provided the paper does not exceed the limits given above. 
-
-\vspace{1cm}
-\textit{Revised May 2019}
 
 \end{document}
