@@ -141,11 +141,9 @@ For the frontend, we will need a web3 library depending on the programming kangu
 
 \section{THE CRYPTO-SPATIAL FRAMEWORK}\label{sec:THE CRYPTO-SPATIAL FRAMEWORK}
 
-The Crypto-Spatial Framework is a set of smart contracts written in Solidity (programming language for Ethereum) which serves as base classes, like in Object Oriented Programming, that can be inherited and specilized to meet busienss needs. The architecture of the Crypto-Spatial smart constracts is inspired from OGC Simple Features specifications. 
+The Crypto-Spatial Framework is a set of smart contracts written in Solidity (object oriented programming language for Ethereum) and serves as base classes that can be specilized and customized to meet business needs. The architecture of the Crypto-Spatial smart constracts is inspired from the OGC Simple Features specifications [..]. 
 
-To uniquely identify spatial features on the distributed ledger the FOAM space [foam.space] concept of CryptoSpatial Coordinate (CSC) was used. Nevertheless, some modifications was implemented to explore the alternatives suggested by the [OGC discussion paper (7.5)-18-041r1.html] as the use of the H3 javascript library [uber.github.io/h3/], with the resolution 15 (Average Hexagon Edge Length  of 0.5 km), which it is a partially conforming implementation of the [Geodesic Discrete Global Grid Systems-http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf) OGC standard.
-
-Also, the FOAM protocole concept of Crypto-Spatial Coordinate (CSC) was used to uniquely idenitify spatial features on the Blockchain immutable ledger with some customization of the nominal foam.space specifiations to meet OGC Blockchain and Distributed Ledger Technologies Domain Working Group recommandations.
+To uniquely identify spatial features on the Blockchain distributed ledger, the FOAM space [foam.space] concept of CryptoSpatial Coordinate (CSC) is used. Nevertheless, some modifications was implemented to explore the alternatives suggested by the [OGC discussion paper (7.5)-18-041r1.html] as the use of the H3 javascript library [uber.github.io/h3/], with the resolution 15 (Average Hexagon Edge Length  of 0.5 km), which it is a partially conforming implementation of the [Geodesic Discrete Global Grid Systems-http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf) OGC standard.
 
 \subsection{Framework Design}\label{sec:Framework Design}
 
@@ -160,86 +158,60 @@ The Crypto-Spatial smart contracts library, illustrated in the following class d
 \end{center}
 \end{figure}
 
-The main goal of this project is to deliver a framework of geospatially enabled smart contracts and libraries for secure Geo-dApps developement. 
+With this approach the developer should be able to : 
 
-1. The developer should be able to use a deployed `geospatial` smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum addresses.
-
-1. The developer should be able to inherit/use the Solidity components to build his custom contracts and develop more complex decentralized systems. 
-
-1. The developper should be able to integrate/donwload the solidity reusable components (contacts) from [npm](https://www.npmjs.com/) and/or [ethPM](https://www.ethpm.com/) as standalone packages or included in a widely accepted library, like [openZeppelin](https://openzeppelin.com/contracts/).
-
-1. The developper should be able to visualize on a map all the gospatial features stored on the permanently deployed registry (as features index) to administer the features belonging to his regitries.
-
-1. The developper should be able to access a fully featured dasboard displaying all useful information about the permanently deployed features registries (the features index).   
-
-1. The developper should be able to interact with the features index with the [OGC OpenAPI REST API](http://docs.opengeospatial.org/wp/16-019r4/16-019r4.html) to discover and fetch content.
+%\itemize
+\begin{enumerate}
+\setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
+\item{inherit/use the Solidity components to build his custom contracts and develop more complex geospatial decentralized system.} 
+\item{use a deployed Crypto-Spatial smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum an addresses.}
+\item{integrate/donwload the solidity reusable components (contacts) from [npm](https://www.npmjs.com/) and/or [ethPM](https://www.ethpm.com/) as standalone packages or included in a widely accepted library, like [openZeppelin](https://openzeppelin.com/contracts/)}
+\item{visualize on a map all the gospatial features stored on the permanently deployed registry (as features index) to administer the features belonging to his regitries.}
+\item{access a fully featured dasboard displaying all useful information about the permanently deployed features registries (the features index)}
+\end{enumerate}
 
 \subsubsection{CSFeature}\label{sec:CSFeature}
 
-The library design, inspired from OGC Simple Features, comprises a base abstract CSFeature smart contract to represent any type of spatial features. This smart contract is specialized to hanldle Points, Curves and Surfaces with the CSCurve, CSPoint and the CSSurface smart contracts respectively.
+The library design, inspired from OGC Simple Features, comprises a base abstract CSFeature smart contract to represent any type of spatial features. This smart contract is specialized to hanldle Points, Curves and Surfaces with the CSPoint, CSCurve and the CSSurface smart contracts respectively.
 
-The CSFeature smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Formally :
+The CSFeature smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Main members are :
 
-\textbf{csc :} the Crypto-Spatial Coordinate, which is the Keccak-256 hash of the DGGS index of the spatial feature and the owner address.
-
-\textbf{wkbHash :} the Well Known Binary Hash of the spatial feature GeoJSON geometry.
-
-\textbf{dggsIndex :} the Disrcete Global Geodetic System index of the spatial feature.
-
-\textbf{h3Resolution :} the H3 resolution used for the spatial feature.
-
-\textbf{CSGeometryType :} the geometry type of the spatial feature (Point, Curve, Surface).
-
-\textbf{constructor :} the constructor that initiate all state variables.
-
-\textbf{getGeometryType :} getter for geometry type.
-
-\textbf{getFeatureCSC :} getter for CSC.
-
-\textbf{getFeatureDGGSIndex :} getter for DGGS Index.
-
-\textbf{fetchFeature :} fetch all the state variables of the feature
-
-\textbf{setWkbHash :} setter for wkbHash.
-
-\textbf{kill :} to permanently remove the spatial feature from the blockchain ledger.
+\textbf{bytes32 csc:} the Crypto-Spatial Coordinate, which is the Keccak-256 hash of the DGGS index of the spatial feature and the owner address. \\
+\textbf{bytes32 wkbHash:} the Well Known Binary Hash of GeoJSON geometry. \\
+\textbf{bytes15 dggsIndex:} the Disrcete Global Geodetic System index. \\
+\textbf{uint h3Resolution:} the H3 resolution used by the registry.\\
+\textbf{enum CSGeometryType:} the geometry type (Point, Curve, Surface). \\
+\textbf{constructor:} the constructor that initiate all state variables. \\
+\textbf{function getGeometryType:} getter for geometry type. \\
+\textbf{function getFeatureCSC:} getter for CSC. \\
+\textbf{function getFeatureDGGSIndex:} getter for DGGS Index. \\
+\textbf{function fetchFeature:} fetch all the state variables of the spatial feature. \\
+\textbf{function setWkbHash:} setter for wkbHash.\\
+\textbf{function kill:} to permanently remove the spatial feature from the blockchain ledger.
 
 \subsubsection{CSFeatureRegistry}\label{sec:CSFeatureRegistry}
 
 The second important abstract smart contract of the Crypto-Spatial core library design is the CSFeatureRegistry which serves as the spatial features collection. 
-The CSFeatureRegistry smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Formally :
+The CSFeatureRegistry smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. The main members of this smar contracts are :
 
-\textbf{h3Resolution :} the H3 resolution of the spatial feature registry (from 1 to 15) see [.....].
-
-\textbf{name :} the displayed name.
-
-\textbf{srs :} the Spatial Reference System code (EPSG or equivalent).
-
-\textbf{featuresCount :} the Counter of the added features.
-
-\textbf{features :} an addresses mapping to handle the spatial features added to the registry.
-
-\textbf{addedIndexes :} a boolean mapping to keep trace of added indexes.
-
-\textbf{indexOwner :} a mapping to keep trace of DGGS indexes owners.
-
-\textbf{constructor :} the constructor that initiate all state variables.
-
-\textbf{addFeature :} a modifier that must be called by the addFeature function of inherited smart contract.
-
-\textbf{getFeatureCount :} getter of the featureCount.
-
-\textbf{getFeature :} getter for a designated spatial feature.
-
-\textbf{dggsIndexExist :} to confirm if an Index exist in the registry.
-
-\textbf{dggsIndexOwner :} returns the owner of a designated feature.
-
-\textbf{removeFeature :} permanently remove the spatial fetaure from the registry and the blockchain ledger.
+\textbf{uint h3Resolution:} the H3 resolution of the spatial feature registry (from 1 to 15) see [.....]. \\ 
+\textbf{string name:} the displayed name. \\
+\textbf{string srs:} the Spatial Reference System code (EPSG or equivalent). \\
+\textbf{uint256 featuresCount:} the Counter of the added features. \\
+\textbf{mapping features:} an addresses mapping to handle the spatial features added to the registry. \\
+\textbf{mapping addedIndexes:} a boolean mapping to keep trace of added indexes. \\
+\textbf{mapping indexOwner:} a mapping to keep trace of DGGS indexes owners. \\
+\textbf{constructor:} the constructor that initiate all state variables. \\
+\textbf{function addFeature:} a modifier that must be called by the addFeature function of inherited smart contract. \\
+\textbf{function getFeatureCount:} getter of the featureCount. \\
+\textbf{function getFeature:} getter for a designated spatial feature. \\
+\textbf{function dggsIndexExist:} to confirm if an Index exist in the registry. \\
+\textbf{function dggsIndexOwner:} returns the owner of a designated feature. \\
+\textbf{function removeFeature:} permanently remove the spatial fetaure from the registry and the blockchain ledger.
 
 \subsection{Solidity Implementation}\label{sec:Solidity Implementation}
 
-To demonstrate the suitability of the previous design, a smart contracts library has been implemented using the Solidity programming language and the Truffle Suite. Herafter, a code snipet of the \textbf{addFeature} modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
+To demonstrate the suitability of the previous design, all the smart contracts library components has been implemented in Solidity using the Truffle Suite [..]. Herafter, a code snipet of the \textbf{addFeature} modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
 
 \begin{verbatim}
 modifier 
@@ -264,109 +236,43 @@ addFeature(bytes15 dggsIndex,
 }
 \end{verbatim}
 
-The complete implementation of the Crypto-Spatial framework can be found on the following github repository.
+The complete implementation of the Crypto-Spatial framework can be found on the following github repository.\\
 https://github.com/allilou/onchain-land-administration/tree/master/solidity/contracts/geospatial
 
-\subsection{Security and design patterns}\label{sec:Security issues and design patterns}
-
-In this section we systematize the security vulnerabilities of Ethereum smart
-contracts. We group the vulnerabilities in three classes, according to the level
-where they are introduced (Solidity, EVM bytecode, or blockchain). Further, we
-illustrate each vulnerability at the Solidity level through a small piece of code.
-All these vulnerabilities can be (actually, most of them have been) exploited to
-carry on attacks which e.g. steal money from contracts. Table 1 summarizes our
-taxonomy of vulnerabilities, with links to the attacks illustrated in Section 4.
+\subsection{Security issues and design patterns}\label{sec:Security issues and design patterns}
 
 \subsubsection{Security issues mitigation}\label{sec:Security issues mitigation}
 
-As smart contracts are immutable code taht execute in decentralized paradigm a set of strategies to avoid common attacks has to be used. [https://blog.sigmaprime.io/solidity-security.html) 
+In this section we synthetize the security vulnerabilities of Ethereum smart contracts and the vulnerabilities that can be (actually, most of them have been) exploited to carry on attacks. To avoid these common attacks a set of counter-mesures have been implemented and some of them are described below.
 
-rithmetic Over/Under Flows
-To guard against under/overflow vulnerabilities we use the openZeppelin ```SafeMath``` mathematical library for the state variable ```featuresCount (uint256)``` in the [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol).
+\textbf{Arithmetic Over/Under Flows}  To mitigate under/overflow vulnerabilities we use the openZeppelin 'SafeMath' mathematical library. 
 
-Security tools
-MythX
-Having some trouble using the command line analysis `truffle run verify`, the MythX Visual Studio Code was used instead.
-The full report highlight two low severity issues described bellow. 
+\textbf{Reentrancy} To mitigate the reentrancy vulnerability we place any code that performs external calls after any logic updating state variables. 
 
-Detected Issues
-
-| 0 High | 0 Medium | 2 Low |
-|--------|----------|-------|
-
-| ID | Severity |  Name | File | Location |
-|----|----------|-------|------|----------|
-|SWC-103| Low| Floating Pragma |CSFeatureRegistry.sol |L: 9 C: 0 |
-|SWC-108 |Low|State Variable Default Visibility|CSFeatureRegistry.sol |L: 30 C: 10|
-
-
-Mythril
-Knowing that the free version of MythX don't analyze all the security vulnerabilities, the `mythril` tool was also used to check the smart contracts of this project.
-
-Unfortunately, the latest version (v0.21.20) of this tool don't returns any analysis result.
-```
-mythril always retuns  The analysis was completed successfully. No issues were detected.
-```
-We tried with docker (on Debian Linux / windows 10) and with the python installed version of mythril, we get the same result !!!. The log was :
-```
-
-Desperate from using `mythril`, the `slither` tool was used and returns the following results.
-
-```
-INFO:Slither:./contracts/LAParcelRegistry.sol analyzed (13 contracts with 40 detectors), 36 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
-
-```
+Also, to avoid security vulnerabilities, the Crypto-Spatial smart contracts libray have been audited using common Ethereum security tools, formally : MythX, Mythril and Slither. All the detected vulnerabilities have been fixed.
 
 \subsubsection{Design patterns}\label{sec:Design patterns}
 
-As smart contracts are special immutable code executing on the Ethereum blockchain, a number of design patterns has to be applied to guarantee they are correctly prepared for all situations. This include :
-
-
-Fail early and fail loud
-In the smart contracts of this project we check the condition required for execution (by using  ```require()```) as early as possible in the function body and throws an exception if the condition is not met . Those exeptions are also confirmed by the tests. 
-
-Restricting Access
-The acces to the smart contract functions that change the states is restricted using the openZeppelin library. In fact :
-
-- [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) inherit from ```Ownable``` and use ```Roles``` to limit acces to setters and the ```kill``` function.
-
-- In [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol) access to ```removeFeature``` function is also limited to admins declared in the constructor. 
-
-In addition, the acces to the state variable of the [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) smart contract is restricted to ```internal```.
-
-Mortal
-The [CSFeature.sol](../solidity/contracts/geospatial/CSFeature.sol) allow autodestruction which remove it definitly from the blockchain using the  ```removeFeature``` function.
-
-Auto Deprecation
-
-The auto deprecation design pattern is not used. We prefere using ```Pausable```. 
-
-Circuit Breaker
-The [CSFeatureRegistry.sol](../solidity/contracts/geospatial/CSFeatureRegistry.sol) inherit from the openZeppelin ```Pausable``` contract which allow pausing the smart contract from adding and removing features from the registry.  
-
-Inheritance and interfaces 
-The geospatial library part of this project, illustrated in the following class diagram, is designed and implemented using inheritance and interfaces to simplify its resusability.
-
+As smart contracts are special immutable code executing on the Ethereum blockchain, a number of design patterns has to be applied to guarantee they are correctly prepared for all situations. This include checking the inputs as early as possible in the function body and throws an exception if the condition is not met, and restricting acces to the smart contract functions that change the states using the openZeppelin libraries 'Ownable' and 'Roles'.
 
 \newpage
 \section{DECENTRALIZED APPLICATIONS}\label{sec:DECENTRALIZED APPLICATIONS}
 
-Knowing that smart contracts takes only in charge the immutable part of the business logic of an application, it is also necessary to implement a front end application to interact with the final user, set/get state variables and make calls to smart contracts functions. In the Ethereum techspace, this is generally done using ReactJS with the web3 javascript library. To build a geospatially enabled decentralized application (dApp), integrating webmapping components with web3 enabled User Interface (UI) is necessary.
+Knowing that smart contracts takes only in charge the immutable part of the business logic of an application, it is also necessary to implement a frontend application to interact with the final user, set/get state variables and make calls to smart contracts functions. In the Ethereum techspace, this is generally done using ReactJS with the web3.js javascript library. To build a geospatially enabled decentralized application (GeodApp), integrating webmapping components with web3 enabled User Interface (UI) is necessary.
  
 \subsection{Geospatial dApps Architecture}\label{sec:Geospatial dApps Architecture}
 
-To buikd Geospatially enabed dApps for the Ethereum blockchain the following 3-tiers architecture is recommanded. Formally:
+To build Geospatially enabed dApps for the Ethereum blockchain the following 3-tiers architecture is recommanded:
 
 %\itemize
 \begin{enumerate}
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
 \item{The smart contracts written in Solidity.} 
 \item{The IPFS/OrbitDB Storage.}
-\item{The frontend web application built with ReactJS.}
+\item{The frontend web application (built with ReactJS or others).}
 \end{enumerate}
 
-The generic interaction between the previous components of a Geospatial dApp can be described by the sequence diagram on figure [].
+The generic interaction between the previous components of a GeodApp can be described by the sequence diagram on figure [].
 
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
@@ -377,17 +283,15 @@ The generic interaction between the previous components of a Geospatial dApp can
 \end{center}
 \end{figure}
 
-The choice to store the geometries of the spatial features is justified by the gas cost of the storage on the Ethereum Blockchain. It cheaper to store the Well Known Binary (WKB) hash on the Blockchain and the WKB of the spatial feature geometry on OrbitDB/IPFS.
+The choice to store the geometries of the spatial features on the IPFS (OrbitDB) is justified by the gas cost of the storage on the Ethereum Blockchain. It cheaper to store the Well Known Binary (WKB) hash on the Blockchain and the WKB of the spatial feature geometry on OrbitDB/IPFS.
 
 \subsection{Decentralized land administration (DeLA)}\label{sec:Decentralized land administration (DeLA)}
 
-(United Nations Food and Agriculture Organisation - Solutions for Open Land Administration)
+As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application, we built DeLA GeodApp (Decentrelized Land Administration) which main objective is to implement on the Ethereum blockchain all the featires of the the open source SOLA-FAO (Solutions for Open Land Administration) [https://github.com/SOLA-FAO/] which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html).
 
-As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application (dApp), we built a dApp aiming to manage Land Administration on the Ethereum blockchain based on the Solutions for Open Land Administration (SOLA-FAO)](https://github.com/SOLA-FAO/) which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html).
+One of the major goals for porting this land registry solution to the Etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
 
-One of the major goals for porting this land registry solution to the etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
-
-The source code of this dApp is available on [https://github.com/allilou/onchain-land-administration] and a working version, deployed on the Rinkeby testnet, is available on [https://allilou.github.io/onchain-land-administration/].
+The source code of this dApp is available on [https://github.com/allilou/onchain-land-administration] and a working version, deployed on the Rinkeby testnet, is live on [https://allilou.github.io/onchain-land-administration/].
 
 The class diagram on figure [] illustrate the inheritance mecanism used the easily implement specific business logic with solidity smart contracts.
 
@@ -399,77 +303,76 @@ The class diagram on figure [] illustrate the inheritance mecanism used the easi
 \end{center}
 \end{figure}
 
-
+To demonstrate the ability to resuse business logic on the Etheruem smart contracts, herafter a code snipet of the \textbf{claimParcel} function reusing the \textbf{CSFeature addFeature} modifier.
 \begin{verbatim}
-function
-addParcel()
-}
+function 
+claimParcel(bytes15 dggsIndex,
+		bytes32 wkbHash,
+		string memory extAddr,
+		string memory label,
+		uint area,
+		string memory landUseCode,
+		LAParcel.CadastralTypeCode cadastralType)
+      public 
+      addFeature(dggsIndex, wkbHash, msg.sender)
+      returns (bytes32) {
+      ...
+    return csc;
+  }
 \end{verbatim}
 
-
-Javascript libraries used 
-Leaflet ....
-...
-
+\newpage
 
 \section{BLOCKCHAIN BUSINESS MODELS}\label{sec:BLOCKCHAIN BUSINESS MODELS}
 
-The adoption of the proof-of-concept described in this contribution can open many business opportunities as those described bellow and inspired from [Top 7 Blockchain Business Models That You Should Know About](https://101blockchains.com/blockchain-business-models/).
-
+The adoption of the proof-of-concept described in this contribution can open many business opportunities as those described bellow and inspired from [https://101blockchains.com/blockchain-business-models/].
 
 \subsection{Developement plateform}\label{sec:Developement plateform}
 
-The main goal of this project is to deliver a framework of geospatially enabled smart contracts and libraries for secure Geo-dApps developement. It will provide implementations of standards like [OGC Simple Features Access](http://portal.opengeospatial.org/files/artifactid=25355), [OGC Discrete Global Grid Systems](https://www.opengeospatial.org/projects/groups/dggsswg), [ISO 19107 Geographic information — Spatial schema](https://www.iso.org/standard/66175.html?browse=tc) and the [FOAM protocol](https://foam.space/publicAssets/FOAMWhitepaper.pdf).
+The main goal of Crypto-Spatial is to deliver a framework of geospatially enabled smart contracts and libraries for secure GeodApps developement. It will provide implementations of standards like [OGC Simple Features Access], [OGC Discrete Global Grid Systems], [ISO 19107 Geographic information - Spatial schema] and the [FOAM protocol].
 
 The smart contracts and libraries can be deployed, as-is or extended to suit business needs, as well as Solidity components to build custom contracts and more complex decentralized systems. 
 
-After reaching certain maturity, an  application will be made for this framework as a candidate to [OpenZeppelin](https://openzeppelin.com/) smart contracts.
+After reaching certain maturity, this framework can be submitted as a candidate to [OpenZeppelin], or as an EIP (Ethereum Improvement Proposal) for standardization by the community.
 
 \subsection{Blockchain as a service (BaaS)}\label{sec:Blockchain as a service (BaaS)}
 
 To fully operate the DeLA platform, a set of permanently deployed components are required. In addition to the geospatially enabled smart contracts and libraries deployed on the Etheruem network (test in the developement phase and mainet after) the platform will require : 
-1. a mapping server with its geospatial database to store the spatial features (The Feature Index). The early odpoted solution is a locally stored [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) database and [GeoJSON](https://geojson.org/) fetching requests for visualisation purposes. But to reach the required scalability in the futur, the final plateform will probably be implemented using [PostgreSQL database](https://www.postgresql.org/), [PostGIS middleware](https://postgis.net) and [Geoserver](http://geoserver.org/) as webmapping server.  
-2. a backend web server to manage business logic tasks, mainly the smart contracts events handling needed to catch the ledger recorded spatial features and populate the Features Index (database). This component will implement the [OGC OpenAPI API](http://docs.opengeospatial.org/wp/16-019r4/16-019r4.html) standard to discover and fetch features.
-3. a frontend web server to store and publish the platform Dashboard Application. 
+%\itemize
+\begin{enumerate}
+\setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
+\item{a mapping server with its geospatial database to store the spatial features (The Feature Index). The final plateform can be implemented using [PostgreSQL database], [PostGIS middleware] and [Geoserver] as webmapping server.} 
+\item{a frontend web server to store and publish the platform Dashboard Application.}
+\item{(optionnaly) a backend web server to manage business logic tasks, mainly the smart contracts events handling needed to catch the ledger recorded spatial features and populate the Features Index (database)}
+\end{enumerate}
 
-The components 1 and 2 are by design a shared services that can be easily montized for further integration in custom blockchain geospatially enabled applications, without the need to redeploy them. The deploiment diagram below illustrate this strategy.
-
-![](./diagrams/exports/deploy-crypto-spatial-lib/deploy-crypto-spatial-lib.png)
-
+The components 1 and 3 are by design a shared services that can be easily montized for further integration in custom blockchain geospatially enabled applications, without the need to redeploy them. The deploiment diagram below illustrate this strategy.
 
 \subsection{Blockchain based Software products}\label{sec:Blockchain based Software products}
 
-The [DeLA](../README.md) (Decentralized Land Administration) platform developed in this repository is the first prototype built as a proof-of-concept for geospatially enabled application.
+The DeLA (Decentralized Land Administration) platform presented in this contributionis the first prototype built of a geospatially enabled application.
 
-The aim of this pilot project is manage a crawd sourced Land Registry design in conformance with the [ISO 19152:2012 - Geographic information — Land Administration Domain Model (LADM)](https://www.iso.org/standard/51206.html?browse=tc).
-
-This prototype will serve as a fully operationnal demonstation of the proposed concepts and implementations, and could therefore be used in a variety of tastes, including :
-- Permissionless/Permissioned application for governmental agencies responsible for land adminsitration and lacking critical ressources to undertake there missions as described in the [FAO Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries and Forests in the Context of National Food Security](http://www.fao.org/tenure/voluntary-guidelines/en/).
-- An open data crowd sourcing plateform, OpenStreetMap like, delivering useful land parcel informations where no autoritative or commerical data are available. see [Open Land Data in the Fight Against Corruption - Discussion Report - landportal.org](https://landportal.org/file/47749/download) for more informations.
-- A building block for specfic business case dApps using land information like Real estate, Investments valuation, Social responsbility, Envirmental protection, Disaster management ... 
+This prototype will serve as a fully operationnal demonstation of the proposed approach and could therefore be used in a variety of tastes, including :
+%\itemize
+\begin{enumerate}
+\setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
+\item{Permissionless/Permissioned application for governmental agencies responsible for land adminsitration and lacking critical ressources to undertake there missions as described in the [FAO Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries and Forests in the Context of National Food Security]}
+\item{An open data crowd sourcing plateform, OpenStreetMap like, delivering useful land parcel informations where no autoritative or commerical data are available. [Open Land Data in the Fight Against Corruption - Discussion Report - landportal.org]}
+\item{A building block for specfic business case GeodApps using land information like Real estate, Investments valuation, Social responsbility, Envirmental protection, Disaster management...}
+\end{enumerate}
 
 \section{CONCLUSION}\label{sec:CONCLUSION}
 
-This chapter should draw together all the issues of the research and link back to the aim and objectives, which were outlined in the Introduction and Methodology. 1. Have the aims set at the beginning been met? If not, why not?
-2. Evaluate how your findings bear on issues or points raised in the Literature Review.
-3. What are the implications arising from the findings. Be careful with your generalisations and your interpretations. Recommendations should be based on evidence.
-4. Do you have suggestions for future research in this area?
+In this paper we investigate the suitability of Blockchain Technology to serve as a data layer for geospatial features.We then propose an open architecture for geospatially enabled decentralized applications (GeodApps) based on Ethereum blockchain and IPFS/OrbitDB peer-to-peer storage.
 
-Porting to Hyperledger fabric 
-
-EIP
-
-OpenZeppilin
+The main objective of this investigation have been reached and the proposed design have been successfully implemented in a proof-of-concept GeodApp which is live on the Ethereum Rinkeby testnet and avaibale for further test and improvement as an open source project.
+ 
+Main implications ararising from those findings are summarized on the Business models section and further works should be done to porting this solution to other type of protocoles supporting smart contracts but not using solidity, like Hyperledger fabric.
 
 
 \section*{ACKNOWLEDGEMENTS}\label{ACKNOWLEDGEMENTS}
-Acknowledgements of support for the project/paper/author are welcome. 
 
-Africa Blockchain Alliance
-
-In this sections you should express thanks to those who assisted you in your research. These should be kept
-to a minimum and include academic supervisors and people who participated in the fieldwork, any funding
-bodies and probably a long-suffering spouse, friend or relative.
+I would like to thanks Africa Blockchain Alliance to giving me the chance to enroll on the Africa Blockchain Developper Program supported by ConsenSys Academy. Also many thanks to my family members, particularly Ziad, for supporting me all the way.
 
 {
 	\begin{spacing}{1.17}
@@ -480,3 +383,4 @@ bodies and probably a long-suffering spouse, friend or relative.
 
 
 \end{document}
+¨
