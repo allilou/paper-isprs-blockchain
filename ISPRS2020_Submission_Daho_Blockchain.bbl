@@ -1,0 +1,157 @@
+\begin{thebibliography}{xx}
+
+\bibitem[{BENAHMED DAHO Ali}, 2020a]{dela_live}
+{BENAHMED DAHO Ali}, 2020a.
+ {DeLA live on Rinkeby}.
+ allilou.github.io/onchain-land-administration.
+
+\bibitem[{BENAHMED DAHO Ali}, 2020b]{github_allilou_dela}
+{BENAHMED DAHO Ali}, 2020b.
+ {DeLA source code repository}.
+ github.com/allilou/onchain-land-administration.
+
+\bibitem[Benet, 2014]{benet2014ipfs}
+Benet, J., 2014.
+ Ipfs-content addressed, versioned, p2p file system.
+ {\em arXiv preprint arXiv:1407.3561}.
+
+\bibitem[Dinh et al., 2017]{dinh2017blockbench}
+Dinh, T. T.~A., Wang, J., Chen, G., Liu, R., Ooi, B.~C., Tan, K.-L., 2017.
+ Blockbench: A framework for analyzing private blockchains.
+ \emph{Proceedings of the 2017 ACM International Conference on Management of
+  Data}, ACM, 1085--1100.
+
+\bibitem[{FAO}, 2017]{sola}
+{FAO}, 2017.
+ {SOLA-FAO}.
+ github.com/SOLA-FAO.
+
+\bibitem[{FOAM}, 2019]{foam}
+{FOAM}, 2019.
+ {Foamspace Corp}.
+ foam.space.
+
+\bibitem[{Foamspace Corp}, 2018]{foamwhitepaper2018}
+{Foamspace Corp}, 2018.
+ FOAM Whitepaper.
+ tiny.cc/n5lpiz.
+
+\bibitem[{Geospatal Media and Communications}, 2019]{geobuiz2019}
+{Geospatal Media and Communications}, 2019.
+ Geobuiz 2019.
+ Geospatial Industry Outlook and Readiness Index.
+
+\bibitem[Gobe, Lathouwer, 2018]{ogcdiscuss}
+Gobe, H., Lathouwer, B.~D., 2018.
+ {Geospatial Standardization of Distributed Ledger Technologies}.
+ tiny.cc/36lpiz.
+
+\bibitem[{H3}, 2020]{h3}
+{H3}, 2020.
+ {Uber Technologies Inc.}
+ uber.github.io/h3.
+
+\bibitem[{Helium}, 2020]{helium}
+{Helium}, 2020.
+ {Helium Systems Inc}.
+ www.helium.com.
+
+\bibitem[Herring et al., 2011]{herring2011opengis}
+Herring, J. et~al., 2011.
+ OpenGIS{\textregistered} Implementation Standard for Geographic
+  information-Simple feature access-Part 1: Common architecture [Corrigendum].
+
+\bibitem[ISO, 2008]{iso2008iso}
+ISO, I., 2008.
+ ISO 19107-Geographic information--Spatial schema.
+
+\bibitem[McKay et al., 2016]{mckay2016voluntary}
+McKay, B., Rodriguez, F.~B., Fajardo, D., 2016.
+ The voluntary guidelines on the responsible governance of tenure of land,
+  fisheries and forests in the context of national food security in colombia:
+  Towards democratic land-based resource control.
+ \emph{Colloquium Paper No}, ~19.
+
+\bibitem[{Metamask}, 2020]{metamask}
+{Metamask}, 2020.
+ {ConsenSys AG}.
+ metamask.io.
+
+\bibitem[{MythX}, 2020]{mythx}
+{MythX}, 2020.
+ {CONSENSYS}.
+ mythx.io.
+
+\bibitem[{Nitish Singh}, 2018]{business_models}
+{Nitish Singh}, 2018.
+ {Top 7 Blockchain Business Models That You Should Know About}.
+ 101blockchains.com/blockchain-business-models.
+
+\bibitem[{OGC}, 2019]{ogcbdltdwg}
+{OGC}, 2019.
+ {The Open Geospatial Consortium}.
+ tiny.cc/bfkpiz.
+
+\bibitem[{OpenZeppelin}, 2020]{openzeppelin}
+{OpenZeppelin}, 2020.
+ {OpenZeppelin}.
+ openzeppelin.com/contracts.
+
+\bibitem[{OrbitDB}, 2020]{orbitdb}
+{OrbitDB}, 2020.
+ github.com/orbitdb/orbit-db.
+
+\bibitem[Purss et al., 2016]{purss2016ogc}
+Purss, M.~B., Gibb, R., Samavati, F., Peterson, P., Ben, J., 2016.
+ The ogc{\textregistered} discrete global grid system core standard: A
+  framework for rapid geospatial integration.
+ \emph{2016 IEEE International Geoscience and Remote Sensing Symposium
+  (IGARSS)}, IEEE, 3610--3613.
+
+\bibitem[{ReactJS}, 2020]{reactjs}
+{ReactJS}, 2020.
+ {Facebook Inc.}
+ reactjs.org.
+
+\bibitem[Seufert, 2013]{seufert2013fao}
+Seufert, P., 2013.
+ The FAO voluntary guidelines on the responsible governance of tenure of land,
+  fisheries and forests.
+ {\em Globalizations}, 10(1), 181--186.
+
+\bibitem[{Slither analyzer}, 2020]{slihter}
+{Slither analyzer}, 2020.
+ {crytic.io}.
+ github.com/crytic/slither.
+
+\bibitem[{Truffle}, 2020]{truffle}
+{Truffle}, 2020.
+ {Truffle Blockchain Group}.
+ www.trufflesuite.com.
+
+\bibitem[{UPort}, 2020]{uport}
+{UPort}, 2020.
+ {ConsenSys AG}.
+ www.uport.me.
+
+\bibitem[Van~Oosterom et al., 2013]{van2013iso}
+Van~Oosterom, P., Lemmen, C., Uitermark, H., 2013.
+ ISO 19152: 2012, land administration domain model published by ISO.
+ {\em FIG Working Week 2013 in Nigeria--Environment for Sustainability, Abuja,
+  Nigeria, 6--10 May 2013}.
+
+\bibitem[{Web3.js}, 2020]{web3_js}
+{Web3.js}, 2020.
+ github.com/ethereum/web3.js.
+
+\bibitem[Wood et al., 2014]{wood2014ethereum}
+Wood, G. et~al., 2014.
+ Ethereum: A secure decentralised generalised transaction ledger.
+ {\em Ethereum project yellow paper}, 151(2014), 1--32.
+
+\bibitem[{XYO}, 2019]{xyo}
+{XYO}, 2019.
+ {XYO Foundation}.
+ xyo.network.
+
+\end{thebibliography}

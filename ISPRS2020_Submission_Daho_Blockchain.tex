@@ -65,9 +65,9 @@ Blockchain is an emerging immature technology that disrupt many well established
 % KAO: Sloppy spacing ensures non-overfull lines. Can be removed if this is not an issue.
 \sloppy
 
-Geospatial technology is nowadays in the heart of major socio-economical processes giving experts and casual users valuable insights to improve there performances, optimize there daily tasks and make informed decisions. However, as for any industry sector, a growing number of deeptech technologies are emerging and disrupting well known workflows and established practices. In fact, the permeation of technologies such as IoT, Big Data Analytics, Cloud Computing, Artificial Intelligence, etc. have also greatly aided the spurt in adoption of Location Intelligence solutions [GeoBuiz-19 report]. Nevertheless, we noted that in the recent years, Blockchain technology has not been intensively investigated for its suitability to leverage geospatial applications, and it's just in july 2019 that the OGC announces the creation of a new Domain Working Group for Blockchain and Distributed Ledger Technologies (BDLT/DWG)[opengeospatial.org press 3016].
+Geospatial technology is nowadays in the heart of major socio-economical processes giving experts and casual users valuable insights to improve there performances, optimize there daily tasks and make informed decisions. However, as for any industry sector, a growing number of deeptech technologies are emerging and disrupting well known workflows and established practices. In fact, the permeation of technologies such as IoT, Big Data Analytics, Cloud Computing, Artificial Intelligence, etc. have also greatly aided the spurt in adoption of Location Intelligence solutions \cite{geobuiz2019}. Nevertheless, we noted that in the recent years, Blockchain technology has not been intensively investigated for its suitability to leverage geospatial applications, and it's just in july 2019 that the OGC announces the creation of a new Domain Working Group for Blockchain and Distributed Ledger Technologies (BDLT/DWG) \cite{ogcbdltdwg}.
 
-In addition, despite the existance of many initiatives to develop standardized protocols for geospatial technology on the blockchain, like [foam.space], [xyo.network], [helium.com], we notice that all those projects focus mainly on proof-of-location wireless networks and not on geospatial data structures and applications. To fill this gap, we investigate in this contribution the suitability of Blockchain technology for the storge, retrieval and processing of vector geospatial data. Also, a generic architecture for geospatially enabled decentralized applications, is proposed and a proof-of-concept is developped using the proposed approach.
+In addition, despite the existance of many initiatives to develop standardized protocols for geospatial technology on the blockchain, like \cite{foam}, \cite{xyo}, \cite{helium}, we notice that all those projects focus mainly on proof-of-location wireless networks and not on geospatial data structures and applications. To fill this gap, we investigate in this contribution the suitability of Blockchain technology for the storge, retrieval and processing of vector geospatial data. Also, a generic architecture for geospatially enabled decentralized applications, is proposed and a proof-of-concept is developped using the proposed approach.
 
 \newpage
 
@@ -78,13 +78,13 @@ In addition, despite the existance of many initiatives to develop standardized p
 
 \subsection{Ethereum blockchain}\label{sec:Ethereum blockchain}
 
-Ethereum blockchain can be viewed as a transaction-based state machine: we begin with a genesis state and incrementally execute transactions to morph it into some final state. It is this final state which we accept as the canonical “version” of the world of Ethereum. The state can include such information as account balances, reputations, trust arrangements, data pertaining to information of the physical world; in short, anything that can currently be represented by a computer is admissible. Transactions thus represent a valid arc between two states; the ‘valid’ part is important. A valid state transition is one which comes about through a transaction. Formally:
+Ethereum blockchain can be viewed as a transaction-based state machine: we begin with a genesis state and incrementally execute transactions to morph it into some final state. It is this final state which we accept as the canonical “version” of the world of Ethereum. The state can include such information as account balances, reputations, trust arrangements, data pertaining to information of the physical world; in short, anything that can currently be represented by a computer is admissible. Transactions thus represent a valid arc between two states; the ‘valid’ part is important. A valid state transition is one which comes about through a transaction \cite{wood2014ethereum}. Formally:
 \begin{equation}
 \boldsymbol{\sigma}_{t+1} \equiv \Upsilon(\boldsymbol{\sigma}_{t}, T)
 \end{equation}
 where $\Upsilon$ is the Ethereum state transition function. In Ethereum, $\Upsilon$, together with $\boldsymbol{\sigma}$ are considerably more powerful than any existing comparable system; $\Upsilon$ allows components to carry out arbitrary computation, while $\boldsymbol{\sigma}$ allows components to store arbitrary state between transactions.
 
-Transactions are collated into blocks; blocks are chained together using a cryptographic hash as a means of reference. Blocks function as a journal, recording a series of transactions together with the previous block and an identifier for the final state. They also punctuate the transaction series with incentives for nodes to \textit{mine}. This incentivisation takes place as a state-transition function, adding value to a nominated account. Formally, we expand to:
+Transactions are collated into blocks; blocks are chained together using a cryptographic hash as a means of reference. Blocks function as a journal, recording a series of transactions together with the previous block and an identifier for the final state. They also punctuate the transaction series with incentives for nodes to \textit{mine}. This incentivisation takes place as a state-transition function, adding value to a nominated account \cite{wood2014ethereum}. Formally, we expand to:
 \begin{eqnarray}
 \boldsymbol{\sigma}_{t+1} & \equiv & \hyperlink{Pi}{\Pi}(\boldsymbol{\sigma}_{t}, B) \\
 B & \equiv & (..., (T_0, T_1, ...), ...) \\
@@ -95,18 +95,17 @@ Where \hyperlink{Omega}{$\Omega$} is the block-finalisation state transition fun
 
 This is the basis of the blockchain paradigm, a model that forms the backbone of not only Ethereum, but all decentralised consensus-based transaction systems to date.
 
-In term of implementation, there are many choices of blockchains: over 200 Bitcoin variants, Ethereum and other permissioned blockchains. To meaningfully compare them, [Ji Wang and al.] identified four abstraction layers found in all of these systems. (1) The consensus layer contains protocols via which a block is considered appended to the blockchain. (2) The data layer contains the structure, content and operations on the blockchain data. (3) The execution layer includes details of the runtime environment support blockchain operations. Finally, (4) the application layer includes classes of blockchain applications. 
+In term of implementation, there are many choices of blockchains: over 200 Bitcoin variants, Ethereum and other permissioned blockchains. To meaningfully compare them, \cite{dinh2017blockbench} identified four abstraction layers found in all of these systems. (1) The consensus layer contains protocols via which a block is considered appended to the blockchain. (2) The data layer contains the structure, content and operations on the blockchain data. (3) The execution layer includes details of the runtime environment support blockchain operations. Finally, (4) the application layer includes classes of blockchain applications. 
 
 The Crypto-Spatial framework, described in this contribution, is designed for the Ethereum Blockchain and propose a set of smart contracts for the execution layer and a cheap geometry storage solution on IPFS for the application layer.
 
 \subsection{IPFS and OrbitDB}\label{sec:IPFS and OrbitDB}
 
-IPFS is a distributed file system which synthesizes successful ideas from many peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the web itself. IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. [Benet, J. (2014). IPFS-content addressed, versioned, P2P file system. arXiv preprint arXiv:1407.3561.]
+IPFS is a distributed file system which synthesizes successful ideas from many peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the web itself. IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures \cite{benet2014ipfs}.
 
-OrbitDB. It is a distributed, peer-to-peer database that is built on top of IPFS [60]. OrbitDB supports various kinds of databases including key-value and log databases. This makes OrbitDB an excellent choice for the decentralized prototype. 
+OrbitDB. It is a distributed, peer-to-peer database that is built on top of IPFS. OrbitDB supports various kinds of databases including key-value and log databases. This makes OrbitDB an excellent choice for the decentralized prototype  \cite{orbitdb}. 
 
-In the solution we present in this contribution, the geometry of spatial features are stored in an OrbitDB IPFS database as OGC Well Known Binary objects for simple parsing and visualisation. The databases also have listeners implemented that triggers when the databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent geometry available. [OrbitDB. OrbitDB. url: https://github.com/orbitdb/orbit-db/].
-
+In the solution we present in this contribution, the geometry of spatial features are stored in an OrbitDB IPFS database as OGC Well Known Binary objects for simple parsing and visualisation. The databases also have listeners implemented that triggers when the databases are replicating. Thereafter, the listeners trigger the user interface to update. This ensures that the users will always have the most recent geometry available.
 
 \subsection{Decentralized applications developement}\label{sec:Decentralized applications developement}
 
@@ -121,29 +120,29 @@ Developping applications for the Blockchain is very similar to developing applic
 \item{Is the speed of the network important? if yes, Blockchain is also not suitable here.}
 \end{enumerate}
 
-The figure [] illustrate the developement workflow for an Ethereum Blockchain decentralized application.
+The figure \ref{fig:figure_dev_workflow} illustrate the developement workflow for an Ethereum Blockchain decentralized application.
 
 \begin{figure}[ht!]
 \begin{center}
 		\includegraphics[width=1.0\columnwidth]{figures/eth-dev-process.png}
 	\caption{Blockchain developement workflow}
-\label{fig:figure_placement}
+\label{fig:figure_dev_workflow}
 \end{center}
 \end{figure}
   
-The proces start by creating an account using a wallet manager like Metamask [] or Uport [] and fund your account using a dedicated faucet for the selected testnet (Rinkeby, Ropsten, ...). If we develop locally we can just use ganache-cli [].
+The proces start by creating an account using a wallet manager like Metamask \cite{metamask} or Uport \cite{uport} and fund your account using a dedicated faucet for the selected testnet (Rinkeby, Ropsten, ...). If we develop locally we can just use ganache-cli \cite{truffle}.
 
-As we start de developp our decentralized application we can use one of the ethereum smart contracts developpement tools like Truffle[]. Those tools allow us to compile, test and deploy our smart contracts on the testnet we select to use for our testing campaing before the ultimate deploiement on the Ethereum mainnet which require real Ether (cryptocurreny of Ethereum).
+As we start de developp our decentralized application we can use one of the ethereum smart contracts developpement tools like \cite{truffle}. Those tools allow us to compile, test and deploy our smart contracts on the testnet we select to use for our testing campaing before the ultimate deploiement on the Ethereum mainnet which require real Ether (cryptocurreny of Ethereum).
 
-For the frontend, we will need a web3 library depending on the programming kanguage we use. Nevertheless, in general in the Etheruem world the ReactJS framework is used to develop the User Interface (UI) with the web3.js library .
+For the frontend, we will need a web3 library depending on the programming kanguage we use. Nevertheless, in general in the Etheruem world the ReactJS \cite{reactjs} framework is used to develop the User Interface (UI) with the web3.js \cite{web3_js} library.
 
 \newpage
 
 \section{THE CRYPTO-SPATIAL FRAMEWORK}\label{sec:THE CRYPTO-SPATIAL FRAMEWORK}
 
-The Crypto-Spatial Framework is a set of smart contracts written in Solidity (object oriented programming language for Ethereum) and serves as base classes that can be specilized and customized to meet business needs. The architecture of the Crypto-Spatial smart constracts is inspired from the OGC Simple Features specifications [..]. 
+The Crypto-Spatial Framework is a set of smart contracts written in Solidity (object oriented programming language for Ethereum) and serves as base classes that can be specilized and customized to meet business needs. The architecture of the Crypto-Spatial smart constracts is inspired from the OGC Simple Features specifications \cite{herring2011opengis}. 
 
-To uniquely identify spatial features on the Blockchain distributed ledger, the FOAM space [foam.space] concept of CryptoSpatial Coordinate (CSC) is used. Nevertheless, some modifications was implemented to explore the alternatives suggested by the [OGC discussion paper (7.5)-18-041r1.html] as the use of the H3 javascript library [uber.github.io/h3/], with the resolution 15 (Average Hexagon Edge Length  of 0.5 km), which it is a partially conforming implementation of the [Geodesic Discrete Global Grid Systems-http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf) OGC standard.
+To uniquely identify spatial features on the Blockchain distributed ledger, the FOAM space concept of CryptoSpatial Coordinate (CSC) is used \cite{foamwhitepaper2018}. Nevertheless, some modifications was implemented to explore the alternatives suggested by \cite{ogcdiscuss} as the use of the H3 javascript library \cite{h3}, with an average Hexagon Edge Length  of 0.5 km (resolution 15), which it is a partially conforming implementation of the Geodesic Discrete Global Grid Systems OGC standard \cite{purss2016ogc}.
 
 \subsection{Framework Design}\label{sec:Framework Design}
 
@@ -154,7 +153,7 @@ The Crypto-Spatial smart contracts library, illustrated in the following class d
 \begin{center}
 		\includegraphics[width=1.0\columnwidth]{figures/class-crypto-spatial-lib.png}
 	\caption{Crypto-Spatial Library Class Diagram}
-\label{fig:figure_placement}
+\label{fig:figure_cs_lib_class}
 \end{center}
 \end{figure}
 
@@ -165,7 +164,7 @@ With this approach the developer should be able to :
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
 \item{inherit/use the Solidity components to build his custom contracts and develop more complex geospatial decentralized system.} 
 \item{use a deployed Crypto-Spatial smart contracts and libraries that suit his business needs from ENS (ens.domains) resolvable Ethereum an addresses.}
-\item{integrate/donwload the solidity reusable components (contacts) from [npm](https://www.npmjs.com/) and/or [ethPM](https://www.ethpm.com/) as standalone packages or included in a widely accepted library, like [openZeppelin](https://openzeppelin.com/contracts/)}
+\item{integrate/donwload the solidity reusable components (contacts) from npmjs.com and/or ethpm.com as a standalone packages or included in a widely accepted library, like openZeppelin \cite{openzeppelin}}
 \item{visualize on a map all the gospatial features stored on the permanently deployed registry (as features index) to administer the features belonging to his regitries.}
 \item{access a fully featured dasboard displaying all useful information about the permanently deployed features registries (the features index)}
 \end{enumerate}
@@ -177,7 +176,7 @@ The library design, inspired from OGC Simple Features, comprises a base abstract
 The CSFeature smart contract includes all necessary state variables, modifiers, events and functions to store and manipulate spatial features. Main members are :
 
 \textbf{bytes32 csc:} the Crypto-Spatial Coordinate, which is the Keccak-256 hash of the DGGS index of the spatial feature and the owner address. \\
-\textbf{bytes32 wkbHash:} the Well Known Binary Hash of GeoJSON geometry. \\
+\textbf{bytes32 wkbHash:} the Well Known Binary Hash. \\
 \textbf{bytes15 dggsIndex:} the Disrcete Global Geodetic System index. \\
 \textbf{uint h3Resolution:} the H3 resolution used by the registry.\\
 \textbf{enum CSGeometryType:} the geometry type (Point, Curve, Surface). \\
@@ -211,7 +210,7 @@ The CSFeatureRegistry smart contract includes all necessary state variables, mod
 
 \subsection{Solidity Implementation}\label{sec:Solidity Implementation}
 
-To demonstrate the suitability of the previous design, all the smart contracts library components has been implemented in Solidity using the Truffle Suite [..]. Herafter, a code snipet of the \textbf{addFeature} modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
+To demonstrate the suitability of the previous design, all the smart contracts library components has been implemented in Solidity using the Truffle Suite \cite{truffle}. Herafter, a code snipet of the \textbf{addFeature} modifier demonstrating the ability to resuse business logic on the Etheruem smart contracts :
 
 \begin{verbatim}
 modifier 
@@ -228,16 +227,15 @@ addFeature(bytes15 dggsIndex,
 
   addedIndexes[dggsIndex] = true;
   indexOwner[dggsIndex] = _sender;
-  bytes32 csc = CSGeometryLib.computeCSCIndex(_sender, 
-  							dggsIndex); 
+  bytes32 csc = CSGeometryLib.computeCSCIndex(
+  				_sender, dggsIndex); 
   emit LogNewFeatureAdded(name, csc, dggsIndex, 
   				wkbHash, _sender);
   featuresCount = featuresCount.add(1);
 }
 \end{verbatim}
 
-The complete implementation of the Crypto-Spatial framework can be found on the following github repository.\\
-https://github.com/allilou/onchain-land-administration/tree/master/solidity/contracts/geospatial
+The complete implementation of the Crypto-Spatial framework can be found on the project github repository \cite{github_allilou_dela}.\\
 
 \subsection{Security issues and design patterns}\label{sec:Security issues and design patterns}
 
@@ -249,11 +247,11 @@ In this section we synthetize the security vulnerabilities of Ethereum smart con
 
 \textbf{Reentrancy} To mitigate the reentrancy vulnerability we place any code that performs external calls after any logic updating state variables. 
 
-Also, to avoid security vulnerabilities, the Crypto-Spatial smart contracts libray have been audited using common Ethereum security tools, formally : MythX, Mythril and Slither. All the detected vulnerabilities have been fixed.
+Also, to avoid security vulnerabilities, the Crypto-Spatial smart contracts libray have been audited using common Ethereum security tools, formally : MythX/Mythril \cite{mythx} and Slither \cite{slihter}. All the detected vulnerabilities have been fixed.
 
 \subsubsection{Design patterns}\label{sec:Design patterns}
 
-As smart contracts are special immutable code executing on the Ethereum blockchain, a number of design patterns has to be applied to guarantee they are correctly prepared for all situations. This include checking the inputs as early as possible in the function body and throws an exception if the condition is not met, and restricting acces to the smart contract functions that change the states using the openZeppelin libraries 'Ownable' and 'Roles'.
+As smart contracts are special immutable code executing on the Ethereum blockchain, a number of design patterns has to be applied to guarantee they are correctly prepared for all situations. This include checking the inputs as early as possible in the function body and throws an exception if the condition is not met, and restricting acces to the smart contract functions that change the states using the \cite{openzeppelin} libraries 'Ownable' and 'Roles' .
 
 \newpage
 \section{DECENTRALIZED APPLICATIONS}\label{sec:DECENTRALIZED APPLICATIONS}
@@ -279,7 +277,7 @@ The generic interaction between the previous components of a GeodApp can be desc
 \begin{center}
 		\includegraphics[width=1.0\columnwidth]{figures/seq-geospatial-dapps.png}
 	\caption{Geospatial dApps sequence Diagram}
-\label{fig:figure_placement}
+\label{fig:figure_geo_dapps_seq}
 \end{center}
 \end{figure}
 
@@ -287,19 +285,19 @@ The choice to store the geometries of the spatial features on the IPFS (OrbitDB)
 
 \subsection{Decentralized land administration (DeLA)}\label{sec:Decentralized land administration (DeLA)}
 
-As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application, we built DeLA GeodApp (Decentrelized Land Administration) which main objective is to implement on the Ethereum blockchain all the featires of the the open source SOLA-FAO (Solutions for Open Land Administration) [https://github.com/SOLA-FAO/] which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard (Geographic information — Land Administration Domain Model (LADM))](https://www.iso.org/standard/51206.html).
+As a proof-of-concept for the proposed architecture for a Geospatial Decentrelized Application, we built DeLA GeodApp (Decentrelized Land Administration) which main objective is to implement on the Ethereum blockchain all the featires of the the open source SOLA-FAO (Solutions for Open Land Administration) \cite{sola} which is a J2EE implementation that has many uses cases in Africa and Asia. Using SOLA allows us to incorporate international best practice and standards, namely the ISO 19152:2012 standard - Geographic information — Land Administration Domain Model (LADM)) \cite{van2013iso}.
 
-One of the major goals for porting this land registry solution to the Etherum blockchain is the ability to use it as a [crowd sourcing land registry plateform](http://www.fao.org/tenure/voluntary-guidelines/en/) to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
+One of the major goals for porting this land registry solution to the Etherum blockchain is the ability to use it as a crowd sourcing land registry plateform \cite{seufert2013fao} to collect tenure relationships and as a tool for communities to assess and clarify their tenure regimes so to protect the individual and collective rights of their members. 
 
-The source code of this dApp is available on [https://github.com/allilou/onchain-land-administration] and a working version, deployed on the Rinkeby testnet, is live on [https://allilou.github.io/onchain-land-administration/].
+The source code of this dApp is available on \cite{dela_live} and a working version, deployed on the Rinkeby testnet, is live on \cite{github_allilou_dela}.
 
-The class diagram on figure [] illustrate the inheritance mecanism used the easily implement specific business logic with solidity smart contracts.
+The class diagram on figure \ref{fig:figure_dela_class} illustrate the inheritance mecanism used the easily implement specific business logic with solidity smart contracts.
 
 \begin{figure}[ht!]
 \begin{center}
 		\includegraphics[width=1.0\columnwidth]{figures/class-dela.png}
 	\caption{DeLA class Diagram}
-\label{fig:figure_placement}
+\label{fig:figure_dela_class}
 \end{center}
 \end{figure}
 
@@ -325,15 +323,15 @@ claimParcel(bytes15 dggsIndex,
 
 \section{BLOCKCHAIN BUSINESS MODELS}\label{sec:BLOCKCHAIN BUSINESS MODELS}
 
-The adoption of the proof-of-concept described in this contribution can open many business opportunities as those described bellow and inspired from [https://101blockchains.com/blockchain-business-models/].
+The adoption of the proof-of-concept described in this contribution can open many business opportunities as those described bellow and inspired from \cite{business_models}.
 
 \subsection{Developement plateform}\label{sec:Developement plateform}
 
-The main goal of Crypto-Spatial is to deliver a framework of geospatially enabled smart contracts and libraries for secure GeodApps developement. It will provide implementations of standards like [OGC Simple Features Access], [OGC Discrete Global Grid Systems], [ISO 19107 Geographic information - Spatial schema] and the [FOAM protocol].
+The main goal of Crypto-Spatial is to deliver a framework of geospatially enabled smart contracts and libraries for secure GeodApps developement. It will provide implementations of standards like OGC Simple Features Access, OGC Discrete Global Grid Systems, ISO 19107 Geographic information - Spatial schema \cite{iso2008iso} and the FOAM protocol.
 
 The smart contracts and libraries can be deployed, as-is or extended to suit business needs, as well as Solidity components to build custom contracts and more complex decentralized systems. 
 
-After reaching certain maturity, this framework can be submitted as a candidate to [OpenZeppelin], or as an EIP (Ethereum Improvement Proposal) for standardization by the community.
+After reaching certain maturity, this framework can be submitted as a candidate to OpenZeppelin, or as an EIP (Ethereum Improvement Proposal) for standardization by the community.
 
 \subsection{Blockchain as a service (BaaS)}\label{sec:Blockchain as a service (BaaS)}
 
@@ -341,7 +339,7 @@ To fully operate the DeLA platform, a set of permanently deployed components are
 %\itemize
 \begin{enumerate}
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
-\item{a mapping server with its geospatial database to store the spatial features (The Feature Index). The final plateform can be implemented using [PostgreSQL database], [PostGIS middleware] and [Geoserver] as webmapping server.} 
+\item{a mapping server with its geospatial database to store the spatial features (The Feature Index). The final plateform can be implemented using PostgreSQL database, PostGIS middleware and Geoserver webmapping server.} 
 \item{a frontend web server to store and publish the platform Dashboard Application.}
 \item{(optionnaly) a backend web server to manage business logic tasks, mainly the smart contracts events handling needed to catch the ledger recorded spatial features and populate the Features Index (database)}
 \end{enumerate}
@@ -356,8 +354,8 @@ This prototype will serve as a fully operationnal demonstation of the proposed a
 %\itemize
 \begin{enumerate}
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em} 
-\item{Permissionless/Permissioned application for governmental agencies responsible for land adminsitration and lacking critical ressources to undertake there missions as described in the [FAO Voluntary Guidelines on the Responsible Governance of Tenure of Land, Fisheries and Forests in the Context of National Food Security]}
-\item{An open data crowd sourcing plateform, OpenStreetMap like, delivering useful land parcel informations where no autoritative or commerical data are available. [Open Land Data in the Fight Against Corruption - Discussion Report - landportal.org]}
+\item{Permissionless/Permissioned application for governmental agencies responsible for land adminsitration and lacking critical ressources to undertake there missions as described in \cite{mckay2016voluntary}}
+\item{An open data crowd sourcing plateform, OpenStreetMap like, delivering useful land parcel informations where no autoritative or commerical data are available.}
 \item{A building block for specfic business case GeodApps using land information like Real estate, Investments valuation, Social responsbility, Envirmental protection, Disaster management...}
 \end{enumerate}
 

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: ISPRS2020_Submission_Daho_Blockchain.aux
+The style file: isprs.bst
+Database file #1: ISPRS2020_Submission_Daho_Blockchain.bib
+You've used 30 entries,
+            2566 wiz_defined-function locations,
+            713 strings with 7385 characters,
+and the built_in function-call counts, 9899 in all, are:
+= -- 1044
+> -- 488
+< -- 1
++ -- 145
+- -- 138
+* -- 521
+:= -- 2039
+add.period$ -- 86
+call.type$ -- 30
+change.case$ -- 231
+chr.to.int$ -- 29
+cite$ -- 30
+duplicate$ -- 278
+empty$ -- 635
+format.name$ -- 206
+if$ -- 1985
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 149
+num.names$ -- 150
+pop$ -- 166
+preamble$ -- 1
+purify$ -- 240
+quote$ -- 0
+skip$ -- 251
+stack$ -- 0
+substring$ -- 416
+swap$ -- 25
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 120
+warning$ -- 0
+while$ -- 96
+width$ -- 0
+write$ -- 393

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  13 JAN 2020 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.29)  15 JAN 2020 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,16 +425,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (./ISPRS2020_Submission_Daho_Blockchain.aux
 
-LaTeX Warning: Label `fig:figure_placement' multiply defined.
-
-
 LaTeX Warning: Label `sec:DECENTRALIZED APPLICATIONS' multiply defined.
-
-
-LaTeX Warning: Label `fig:figure_placement' multiply defined.
-
-
-LaTeX Warning: Label `fig:figure_placement' multiply defined.
 
 )
 \openout1 = `ISPRS2020_Submission_Daho_Blockchain.aux'.
@@ -567,150 +558,86 @@ Underfull \hbox (badness 1635) in paragraph at lines 94--95
 m/m/n/9.25 is the block-level state-
  []
 
-<figures/eth-dev-process.png, id=109, 505.89pt x 559.33969pt>
+<figures/eth-dev-process.png, id=127, 505.89pt x 559.33969pt>
 File: figures/eth-dev-process.png Graphic file (type png)
 <use figures/eth-dev-process.png>
-Package pdftex.def Info: figures/eth-dev-process.png  used on input line 128.
+Package pdftex.def Info: figures/eth-dev-process.png  used on input line 127.
 (pdftex.def)             Requested size: 233.31252pt x 257.96509pt.
 [2 <./figures/eth-dev-process.png>]
-Underfull \hbox (badness 3271) in paragraph at lines 146--147
-\OT1/ptm/m/n/9.25 with the res-ol-u-tion 15 (Av-er-age Hexagon Edge Length
- []
-
-
-Underfull \hbox (badness 2990) in paragraph at lines 146--147
-\OT1/ptm/m/n/9.25 of 0.5 km), which it is a par-tially con-form-ing im-ple-
- []
-
-<figures/class-crypto-spatial-lib.png, id=126, 570.13pt x 498.86375pt>
+<figures/class-crypto-spatial-lib.png, id=166, 570.13pt x 498.86375pt>
 File: figures/class-crypto-spatial-lib.png Graphic file (type png)
 <use figures/class-crypto-spatial-lib.png>
 Package pdftex.def Info: figures/class-crypto-spatial-lib.png  used on input li
-ne 155.
+ne 154.
 (pdftex.def)             Requested size: 233.31252pt x 204.14725pt.
-
-Underfull \hbox (badness 4454) in paragraph at lines 168--169
-[]\OT1/ptm/m/n/9.25 integrate/donwload the solid-ity re-usable com-pon-ents
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 168--169
-\OT1/ptm/m/n/9.25 (con-tacts) from [npm](https://www.npmjs.com/) an-d/or
- []
-
-
-Underfull \hbox (badness 2205) in paragraph at lines 168--169
-\OT1/ptm/m/n/9.25 [ethPM](https://www.ethpm.com/) as stan-dalone pack-
- []
-
-[3 <./figures/class-crypto-spatial-lib.png (PNG copy)>]
-Overfull \hbox (12.38463pt too wide) in paragraph at lines 237--237
+ [3 <./figures/class-crypto-spatial-lib.png (PNG copy)>]
+Overfull \hbox (12.38463pt too wide) in paragraph at lines 236--236
 []  \OT1/cmtt/m/n/9 require(dggsIndex.length != 0, "Empty dggsIndex");[] 
  []
 
 
-Overfull \hbox (21.83452pt too wide) in paragraph at lines 237--237
-[]  \OT1/cmtt/m/n/9 bytes32 csc = CSGeometryLib.computeCSCIndex(_sender,[] 
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
-\OT1/ptm/m/n/9.25 https://github.com/allilou/onchain-land-
- []
-
-<figures/seq-geospatial-dapps.png, id=137, 528.97626pt x 426.59375pt>
+<figures/seq-geospatial-dapps.png, id=190, 528.97626pt x 426.59375pt>
 File: figures/seq-geospatial-dapps.png Graphic file (type png)
 <use figures/seq-geospatial-dapps.png>
 Package pdftex.def Info: figures/seq-geospatial-dapps.png  used on input line 2
-80.
+78.
 (pdftex.def)             Requested size: 233.31252pt x 188.15096pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-[]\OT1/ptm/m/n/9.25 One of the ma-jor goals for port-ing this land re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-\OT1/ptm/m/n/9.25 gistry solu-tion to the Eth-erum block-chain is the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-\OT1/ptm/m/n/9.25 abil-ity to use it as a [crowd sourcing land re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-\OT1/ptm/m/n/9.25 gistry plateform](http://www.fao.org/tenure/voluntary-
- []
-
-
-Underfull \hbox (badness 4556) in paragraph at lines 292--293
-\OT1/ptm/m/n/9.25 guidelines/en/) to col-lect ten-ure re-la-tion-ships and as a
-
- []
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 292--293
-\OT1/ptm/m/n/9.25 so to pro-tect the in-di-vidual and col-lect-ive rights of th
-eir
- []
-
 [4 <./figures/seq-geospatial-dapps.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
-[]\OT1/ptm/m/n/9.25 The source code of this dApp is avail-able on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
-\OT1/ptm/m/n/9.25 [https://github.com/allilou/onchain-land-administration]
- []
-
-<figures/class-dela.png, id=147, 395.4775pt x 484.81125pt>
+<figures/class-dela.png, id=214, 395.4775pt x 484.81125pt>
 File: figures/class-dela.png Graphic file (type png)
 <use figures/class-dela.png>
-Package pdftex.def Info: figures/class-dela.png  used on input line 300.
+Package pdftex.def Info: figures/class-dela.png  used on input line 298.
 (pdftex.def)             Requested size: 233.31252pt x 286.01396pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-\OT1/ptm/m/n/9.25 The ad-op-tion of the proof-of-concept de-scribed in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-\OT1/ptm/m/n/9.25 this con-tri-bu-tion can open many busi-ness op-por-tun-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-\OT1/ptm/m/n/9.25 it-ies as those de-scribed bel-low and in-spired from
- []
-
-
-Underfull \hbox (badness 2334) in paragraph at lines 353--354
+Underfull \hbox (badness 2334) in paragraph at lines 351--352
 \OT1/ptm/m/n/9.25 The DeLA (De-cent-ral-ized Land Ad-min-is-tra-tion) plat-form
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 []\OT1/ptm/m/n/9.25 Permissionless/Permissioned ap-plic-a-tion for gov-ern-
  []
 
 [5 <./figures/class-dela.png (PNG copy)>]
-No file ISPRS2020_Submission_Daho_Blockchain.bbl.
+(./ISPRS2020_Submission_Daho_Blockchain.bbl
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 61.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9.25> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+
+Underfull \hbox (badness 1448) in paragraph at lines 65--67
+[]\OT1/ptm/m/n/9.25 ISO, I., 2008. ISO 19107-Geographic information--Spatial
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 86--89
+\OT1/ptm/m/n/9.25 You Should Know About. 101blockchains.com/blockchain-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+[]\OT1/ptm/m/n/9.25 OpenZeppelin, 2020. Open-Zep-pelin. open-zep-
+ []
+
+)
 
 Package caption Warning: Unused \captionsetup[table] on input line 26.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 385.
-[6
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 385.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 383.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
  (./ISPRS2020_Submission_Daho_Blockchain.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 385.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 385.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 383.
 Package rerunfilecheck Info: File `ISPRS2020_Submission_Daho_Blockchain.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: BA1636ACB2665B2609000B2EC8D15C90;1499.
@@ -722,16 +649,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 385.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 383.
  ) 
 Here is how much of TeX's memory you used:
- 9674 strings out of 494518
- 144608 string characters out of 6176312
- 257108 words of memory out of 5000000
- 13144 multiletter control sequences out of 15000+600000
+ 9757 strings out of 494518
+ 145900 string characters out of 6176312
+ 259757 words of memory out of 5000000
+ 13192 multiletter control sequences out of 15000+600000
  19776 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 42i,11n,39p,1842b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,39p,1842b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{block} has been referenced but does not exist, re
 placed by a fixed one
 
@@ -754,11 +681,11 @@ msfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (6 pages, 265996 byt
+Output written on ISPRS2020_Submission_Daho_Blockchain.pdf (6 pages, 280690 byt
 es).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
